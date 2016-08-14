@@ -1,0 +1,6 @@
+[submodule "wp/wp-content/themes/marcadordo"]
+	path = wp/wp-content/themes/marcadordo
+	url = https://github.com/Marcador-do/thema
+[submodule "wp/wp-content/plugins/marcadordo-manager"]
+	path = wp/wp-content/plugins/marcadordo-manager
+	url = https://github.com/Marcador-do/marcadordo-manager
