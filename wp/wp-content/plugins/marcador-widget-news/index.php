@@ -198,11 +198,11 @@ else if($type_news == "4") { ?>
 
 
 	<!-- Marcador posts -->
-		<div class="row">
+		<div class="row marcador-post-list-full-row">
 
 			<?php while( $query_posts->have_posts()): $query_posts->the_post();  ?>
 
-			<div class="container-fluid">
+			<div class="col-xs-12 marcador-post-list">
 					<div class="row">
 						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 marcador-post-list-image-col">
 							<a href="<?php echo esc_url( get_permalink() ); ?>">
