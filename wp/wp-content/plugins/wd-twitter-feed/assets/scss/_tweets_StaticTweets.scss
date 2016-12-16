@@ -1,0 +1,101 @@
+.atf-static-tweets {
+    
+    .atf-inner-wrapper {
+        
+        .atf-tweet-wrapper {
+            margin: 0 0 15px 0;
+            width:100%;
+            text-rendering: optimizeLegibility;
+            word-wrap: break-word;
+            -webkit-hyphens: auto;
+            font-size: 14px;
+            @media screen and (max-width: $break-small) {font-size: 0.8em;}
+            
+            .atf-tweet-time {
+                margin: 10px 0;
+                @media screen and (max-width: $break-small) {float:none;}
+            }
+            
+            .atf-user-card {
+                margin: 5px 0 !important;
+                line-height:1 !important;
+                @media screen and (max-width: $break-small) {clear:both;}
+                
+                img {
+                    margin: 5px 0;
+                    display: inline-block;
+                    vertical-align: middle;
+                    @include border-radius( 3px !important );
+                    @include box-shadow( 0 0 4px rgba(0,0,0,0.2) !important ); 
+                }
+                
+                .atf-screen-name {
+                    margin: 5px 0;
+                    display: inline-block;
+                    vertical-align: middle;
+                    
+                    span {font-weight: bold}
+                    a {font-size: 12px}
+                }
+            }
+            
+            .atf-tweet-text {
+                margin: 5px 0 !important;
+                line-height:1.5 !important
+            }
+            
+            .atf-retweet-credits {
+                margin: 5px 0 !important;
+            }
+            
+            .atf-tweet-actions {
+                margin: 5px 0;
+                font-size: 14px;
+                padding: 0;
+                
+                li {
+                    display: inline-block;
+                    margin: 0 5px;
+                    
+                    a {text-decoration: none;border: none;}
+                }
+            }
+        }
+    }
+    
+    &.atf-direction-ltr {
+        .atf-tweet-text {direction: ltr}
+        .atf-retweet-credits {direction: ltr}
+        .atf-tweet-time {float:right}
+        .atf-tweet-actions {direction: rtl}
+    }
+    
+    &.atf-direction-rtl {
+        .atf-tweet-text {direction: rtl}
+        .atf-retweet-credits {direction: rtl}
+        .atf-tweet-time {float:left}
+        .atf-tweet-actions {direction: ltr}
+    }
+    
+    .atf-load-more {
+        text-align: center;
+        margin-bottom: 15px;
+        
+        .atf-text {
+            display: inline-block;
+            background-color: #E5ECF1;
+            padding: 10px 20px;
+            border-bottom: 3px solid #D1D9DE;
+            cursor: pointer;
+            @include box-shadow( 0 2px 4px rgba(0, 0, 0, 0.1) );
+            @include border-radius( 5px );
+            
+            .fa-refresh {
+                margin-right: 10px;
+                margin-left: -5px;
+                font-size: 1.2em;
+                vertical-align: middle;
+            }
+        }
+    }
+}

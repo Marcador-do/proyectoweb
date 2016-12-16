@@ -1,0 +1,38 @@
+@import 'compass/css3';
+
+// Responsive media break points
+$break-small: 776px;
+$break-large: 920px;
+
+/* Fonts
+/*----------------------------------------*/
+
+@font-face {
+    font-family: pacifico;
+    src: url("../fonts/Pacifico.ttf") format("truetype");
+}
+@font-face {
+    font-family: bpdots;
+    src: url("../fonts/BPdotsCondensedDiamond.ttf") format("truetype");
+}
+
+/* Global Elements
+/*----------------------------------------*/
+
+.atf-error {
+    background-color: rgb(255,150,150);
+    border-right: 5px solid red;
+    border-left: 5px solid red;
+    padding: 10px 15px;
+    
+    p {margin: 0 !important; color: black !important}
+}
+
+.screen-reader-text { 
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+    left: 0; top: 0;
+}

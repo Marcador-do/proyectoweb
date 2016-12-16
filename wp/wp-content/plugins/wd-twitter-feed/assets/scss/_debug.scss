@@ -1,0 +1,64 @@
+/* Debug window
+/*----------------------------------------*/
+
+#twitter-feed-debug-window {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top:0;bottom:0;left:0;right:0;
+    z-index:99;
+    
+    h2 {
+        position: fixed;
+        top: 60px;
+        left: 20%;
+        right: 20%;
+        background-color: #555;
+        color: white;
+        padding:13px 20px;
+        margin: 0;
+        font-size: 14px;
+        @include border-radius( 10px 10px 0 0 );
+        @include box-shadow( 0 0 15px rgba(0,0,0,0.3) );
+        
+        i {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: white;
+            color: #555;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            line-height: 20px;
+            padding: 0;
+            @include border-radius( 4px );
+            
+            &:hover {background-color: rgb(255,100,100);}
+        }
+    }
+    
+    .box {
+        position: fixed;
+        top: 100px;
+        bottom: 10%;
+        left: 20%;
+        right: 20%;
+        background-color: white;
+        overflow: auto;
+        padding: 10px 15px;
+        border: 2px solid #555;
+        border-radius: 0 0 10px 10px;
+        
+        ol {
+            list-style-type: decimal;
+            margin: 0 15px;
+            
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
