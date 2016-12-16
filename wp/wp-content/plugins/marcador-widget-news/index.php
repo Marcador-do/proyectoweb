@@ -37,6 +37,14 @@
 				$post_limit = (empty($instance["post_limit"])) ? 1 : $instance["post_limit"];
 				$type_news = (empty($instance["type_news"])) ? 1 : $instance["type_news"];
 				$category = $instance["category"];
+				$tag = $instance["tag"];
+
+				$equipo1_title = sanitize_text_field($instance["equipo1_title"]);
+				$equipo2_title = sanitize_text_field($instance["equipo2_title"]);
+				$equipo1_resultado = sanitize_text_field($instance["equipo1_resultado"]);
+				$equipo2_resultado = sanitize_text_field($instance["equipo2_resultado"]);
+				$equipo_resultado = sanitize_text_field($instance["equipo_resultado"]);
+
 
 				$orden = (empty($instance["orden"])) ? 'date' : $instance["orden"];
 				$orden_type = (empty($instance["orden_type"])) ? 'DESC' : $instance["orden_type"];
@@ -52,6 +60,10 @@
 				if(!empty($category)){
 					$args['cat'] = $category; 
 				}
+				if(!empty($tag)){
+					$args['tag_id'] = $tag; 
+				}
+
 				$query_posts = new WP_Query($args);
 
 				if($query_posts->coun){
@@ -69,6 +81,9 @@
 				if($type_news == "1"){
 					while( $query_posts->have_posts()): $query_posts->the_post(); 
 					?>
+
+
+
 					<!-- Marcador Hero Post -->
 					<article class="row marcador-hero-post">
 						<div class="col-xs-12">
@@ -369,7 +384,35 @@ else if($type_news == "4") { ?>
 </div>
 
 
-<?php } ?>
+<?php } else if($type_news == "5"){
+while( $query_posts->have_posts()): $query_posts->the_post();
+ ?>
+	<!-- Marcador Hero Post Score -->
+<div class="row marcador-hero-post score">
+      <div class="col-xs-12">
+        <header class="marcador-hero-unit" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>');">
+            <!-- Score Board -->
+            <div class="scoreboard">
+                           
+					<span class='team-one-title'><?php echo $equipo1_title; ?></span>
+					    <div class="board">
+					    <div><span><?php echo $equipo1_resultado; ?></span><span> <?php echo $equipo2_resultado; ?></span></div>
+					    <h6><?php echo $equipo_resultado; ?></h6>
+					    </div>
+					<span class='team-two-title'><?php echo $equipo2_title; ?></span>
+			</div>
+			   <!-- end Score Board -->
+          </header>
+        <a href="<?php the_permalink(); ?>" class="marcador-hero-permalink">
+          <div class="hero-heading">
+            <h1 class="heading"><?php the_title(); ?></h1>
+            <p class="excerpt"><?php echo wp_trim_words(get_the_excerpt(),$excerpt_limit); ?></p>
+          </div>
+        </a>
+      </div>
+    </div>
+<!-- /.marcador-hero-post.score -->
+<?php endwhile; } ?>
 
 <!-- /.marcador-hero-post -->
 
@@ -389,9 +432,20 @@ function update($new_instance, $old_instance) {
 	$instance["excerpt_limit"] = $new_instance["excerpt_limit"];
 	$instance["orden"] = $new_instance["orden"];
 	$instance["orden_type"] = $new_instance["orden_type"];
-	$instance["category"] = $new_instance["category"];		        
+	$instance["category"] = $new_instance["category"];	
+	$instance["tag"] = $new_instance["tag"];	
 	$instance["type_news"] = $new_instance["type_news"];
 	$instance["custom_class"] = $new_instance["custom_class"];
+	$instance["widget_title"] = $new_instance["widget_title"];
+	$instance["equipo1_title"] = $new_instance["equipo1_title"];
+	$instance["equipo2_title"] = $new_instance["equipo2_title"];
+	$instance["equipo1_resultado"] = $new_instance["equipo1_resultado"];
+	$instance["equipo2_resultado"] = $new_instance["equipo2_resultado"];
+	$instance["equipo_resultado"] = $new_instance["equipo_resultado"];
+
+
+
+	echo $instance["widget_title"];
 
 
 	return $instance;
@@ -407,9 +461,20 @@ function form( $instance ) {
 	$orden = sanitize_text_field($instance["orden"]);
 	$orden_type = sanitize_text_field($instance["orden_type"]);
 	$category = sanitize_text_field($instance["category"]);
+	$tag = sanitize_text_field($instance["tag"]);
+
 	$custom_class = sanitize_text_field($instance["custom_class"]);
 	$post_limit = $instance["post_limit"];
 	$type_news = $instance["type_news"];
+	$widget_title = $instance["widget_title"];
+	$equipo1_title = $instance["equipo1_title"];
+	$equipo2_title = $instance["equipo2_title"];
+	$equipo1_resultado = $instance["equipo1_resultado"];
+	$equipo2_resultado = $instance["equipo2_resultado"];
+	$equipo_resultado = $instance["equipo_resultado"];
+
+
+
 
 
 
@@ -432,7 +497,7 @@ function form( $instance ) {
 		);
 
 	$cats = get_categories();
-
+	$tags = get_tags();
 
 	?>
 
@@ -448,10 +513,19 @@ function form( $instance ) {
 		<h2><?php _e('Widget de noticias') ?> </h2>
 		<small><?php _e('Puedes seleccionar y filtrar noticias como gustes.'); ?></small>
 		<p>
+			<label><?php _e('Titulo del Widget') ?>
+				<input class="widefat" placeholder="<?php _e('Solo con fines de ejemplificar'); ?>" 
+				name="<?php echo $this->get_field_name('widget_title'); ?>" type="text" 
+				<?php echo checked($widget_title); ?> value="<?php echo $widget_title; ?>" /> 
+			</label>
+		</p>
+		<p>
 			<label><?php _e('Limite') ?>
 				<input class="widefat" placeholder="<?php _e('Por defecto: 1'); ?>" name="<?php echo $this->get_field_name('post_limit'); ?>" type="text" <?php echo checked($post_limit); ?> value="<?php echo $post_limit; ?>" /> 
 			</label>
 		</p>
+		
+
 		<p>
 			<label><?php _e('Excerpt Limite') ?> <small><?php _e('Especifica un limite de palabras') ?></small>
 				<input class="widefat" placeholder="<?php _e('Por defecto: sin limite'); ?>" name="<?php echo $this->get_field_name('excerpt_limit'); ?>" type="number" <?php echo checked($post_limit); ?> value="<?php echo $excerpt_limit; ?>" /> 
@@ -459,7 +533,7 @@ function form( $instance ) {
 		</p>
 
 		<p>
-			<label><?php _e('Tipo de widget') ?>: <br />
+			<label><?php _e('Elegir el estilo') ?>: <br />
 				<select name="<?php echo $this->get_field_name('type_news'); ?>" class='widefat'>
 					<option value="date"><?php _e('- Selecciona -'); ?></option>
 					<?php 
@@ -514,6 +588,78 @@ function form( $instance ) {
 	</select>
 </label>
 </p>
+
+<p>
+	<label><?php _e('Etiquetas') ?>: <small><?php _e('Selecciona una.') ?></small> <br />
+		<select name="<?php echo $this->get_field_name('tag'); ?>" class='widefat'>
+			<option value="date"><?php _e('- Selecciona -'); ?></option>
+			<?php 
+			foreach($tags as $tg):
+				?>
+			<option value="<?php echo $tg->term_id; ?>" <?php selected( $tg->term_id, $tag ); ?>><?php echo $tg->name; ?></option>
+		<?php endforeach; ?>
+
+	</select>
+</label>
+</p>
+
+<hr>
+<h2><?php _e('Solo para columnas con resultados'); ?></h2>
+<h3><?php _e('Equipo 1') ?></h3>
+	<p>
+			<label><?php _e('Título pie del resultado') ?>
+				<input class="widefat"  
+				name="<?php echo $this->get_field_name('equipo_resultado'); ?>" type="text" 
+				<?php echo checked($equipo_resultado); ?> value="<?php echo $equipo_resultado; ?>" /> 
+			</label>
+		</p>
+<table width='100%'>
+	<tr>
+		<td>
+				<p>
+			<label><?php _e('Título') ?>
+				<input class="widefat"  
+				name="<?php echo $this->get_field_name('equipo1_title'); ?>" type="text" 
+				<?php echo checked($equipo1_title); ?> value="<?php echo $equipo1_title; ?>" /> 
+			</label>
+		</p>
+		</td>
+		<td>
+			<p>
+			<label><?php _e('Resultado') ?>
+				<input class="widefat"  
+				name="<?php echo $this->get_field_name('equipo1_resultado'); ?>" type="text" 
+				<?php echo checked($equipo1_resultado); ?> value="<?php echo $equipo1_resultado; ?>" /> 
+			</label>
+		</p>
+		</td>
+	</tr>
+</table>
+<h3><?php _e('Equipo 2') ?></h3>
+	<table width='100%'>
+	<tr>
+		<td>
+				<p>
+			<label><?php _e('Título') ?>
+				<input class="widefat"  
+				name="<?php echo $this->get_field_name('equipo2_title'); ?>" type="text" 
+				<?php echo checked($equipo2_title); ?> value="<?php echo $equipo2_title; ?>" /> 
+			</label>
+		</p>
+		</td>
+		<td>
+			<p>
+			<label><?php _e('Resultado') ?>
+				<input class="widefat"  
+				name="<?php echo $this->get_field_name('equipo2_resultado'); ?>" type="text" 
+				<?php echo checked($equipo2_resultado); ?> value="<?php echo $equipo2_resultado; ?>" /> 
+			</label>
+		</p>
+		</td>
+	</tr>
+</table>
+	
+<hr>
 
 
 <p>
