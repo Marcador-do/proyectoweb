@@ -1,0 +1,21 @@
+@import 'compass/css3';
+
+.twitterfeed-placeholder {
+    background: rgb(50, 222, 244) url(../img/twitter-icon.png) no-repeat left;
+    height: 60px;
+    padding: 5px 5px 5px 90px;
+    font-family: helvetica;
+    color: white;
+    line-height: 60px;
+    background-size: 80px;
+    border: 2px solid rgb(30, 185, 205);
+    margin: 5px 0;
+    @include border-radius( 3px );
+    
+    ul {
+        font-size: 14px;
+        list-style: square;
+        line-height: 20px;
+        margin: 0;
+    }
+}

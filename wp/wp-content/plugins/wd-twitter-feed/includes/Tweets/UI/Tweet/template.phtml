@@ -1,0 +1,78 @@
+<div class="atf-tweet-wrapper" data-tweet-url="<?php echo $this->get_tweet_url() ?>">
+    <?php if(in_array('time', $this->params['show'])): ?>
+        <?php $date = new \DateTime($this->tweet->created_at); ?>
+        <time class="atf-tweet-time" datetime="<?php echo $date->format($date::W3C); ?>" title="<?php _e('Tweet Time', 'twitterfeed'); ?>">
+            <?php echo $this->get_tweet_time(); ?>
+        </time>
+    <?php endif; ?>
+    
+    <div class="atf-user-card">
+        <?php if(in_array('avatar', $this->params['show'])): ?>
+            <img src="<?php echo $this->tweet->image_url; ?>" width="<?php echo $this->avatar_size ?>" height="<?php echo $this->avatar_size ?>" alt="<?php echo $this->tweet->user_name; ?>'s Twitter avatar"/>
+        <?php endif; ?>
+        <div class="atf-screen-name">
+            <?php if(in_array('username', $this->params['show'])): ?>
+                <span><?php echo $this->tweet->user_name; ?></span><br />
+            <?php endif; ?>
+            <?php if(in_array('screenname', $this->params['show'])): ?>
+                <a href="https://twitter.com/<?php echo $this->tweet->screen_name; ?>" target="_blank" dir="ltr">@<?php echo $this->tweet->screen_name; ?></a>
+            <?php endif; ?>
+        </div>
+    </div>
+    <p class="atf-tweet-text"><?php echo \TwitterFeed\Tweets\AbstractTweet::format_tweet_text( $this->tweet->tweet_text ); ?></p>
+
+    <?php if( true == $this->params['retweets'] && $this->tweet->retweeter != null ): ?>
+        <div class="atf-retweet-credits">
+            <i class="fa fa-retweet"></i> <?php _e('Retweeted by', 'twitterfeed'); echo ' '.$this->tweet->retweeter; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if(in_array('media', $this->params['show']) && $this->tweet->media): /* Tweet media */ ?>
+        <?php if( !$this->expand_media ): ?>
+            <a class="atf-show-media-button"><i class="fa fa-youtube-play"></i> <?php _e('<span>Show</span> Media', 'twitterfeed'); ?></a>
+        <?php endif; ?>
+        <div class="atf-media-wrapper"<?php echo $this->expand_media ? ' style="display:block"' : '' ?>>
+            <?php foreach ($this->tweet->media as $medium): extract($medium); ?>
+                <?php if( 'photo' == $type ): ?>
+                    <img src="<?php echo $url; ?>" alt="Tweet Media"/>
+                <?php endif; ?>
+                <?php if( 'animated_gif' == $type ): ?>
+                    <div class="atf-video-container gif">
+                        <video autoplay loop>
+                            <source src="<?php echo $url; ?>" type="video/mp4">
+                            <?php _e('Your browser does not support HTML5 video.','twitterfeed'); ?>
+                        </video>
+                    </div>
+                <?php endif; ?>
+                <?php if( 'vine' == $type ): ?>
+                <div class="atf-video-container vine">
+                    <iframe class="vine-embed" src="<?php echo $embed_url; ?>" frameborder="0"></iframe>
+                </div>
+                <?php endif; ?>
+                <?php if( 'youtube' == $type ): ?>
+                <div class="atf-video-container youtube">
+                    <iframe width="100%" height="360" src="<?php echo $embed_url; ?>" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if(in_array('actions', $this->params['show'])): /* Tweet actions */ ?>
+        <ul class="atf-tweet-actions">
+            <li>
+                <a href="<?php echo $this->intent; ?>tweet?in_reply_to=<?php echo $this->tweet->id_str; ?>" class="reply-action atf-web-intent" title="<?php _e('Reply', 'twitterfeed'); ?>"><i class="fa fa-reply"></i><span class="screen-reader-text"><?php _e('Reply', 'twitterfeed'); ?></span></a>
+            </li>
+            <li>
+                <a href="<?php echo $this->intent; ?>retweet?tweet_id=<?php echo $this->tweet->id_str; ?>" class="retweet-action atf-web-intent" title="<?php _e('Retweet', 'twitterfeed'); ?>"><i class="fa fa-retweet"></i><span class="screen-reader-text"><?php _e('Retweet', 'twitterfeed'); ?></span> <?php echo $this->tweet->retweet_count; ?></a>
+            </li>
+            <li>
+                <a href="<?php echo $this->intent; ?>like?tweet_id=<?php echo $this->tweet->id_str; ?>" class="favorite-action atf-web-intent" title="<?php _e('Like', 'twitterfeed'); ?>"><i class="fa fa-heart"></i><span class="screen-reader-text"><?php _e('Like', 'twitterfeed'); ?></span> <?php echo $this->tweet->favorite_count; ?></a>
+            </li>
+        </ul>
+    <?php endif; /* End actions */ ?>
+        
+    <?php if( 'talk-bubble' == $this->params['skin'] ): ?>
+        <i class="fa fa-twitter"></i>
+    <?php endif; ?>
+</div>

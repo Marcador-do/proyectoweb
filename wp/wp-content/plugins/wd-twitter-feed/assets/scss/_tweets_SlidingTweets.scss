@@ -1,0 +1,92 @@
+.atf-sliding-tweets {
+    height:100px;
+    overflow: hidden;
+    position: relative;
+    margin: 15px 0;
+    @include transition( height 1s ease-out );
+
+    .atf-tweet-padder {
+        position: absolute;
+        width: 100%;
+    }
+    
+    .atf-tweet-wrapper {
+        position: relative;
+        
+        .atf-tweet-time {
+            float: right;
+            font-size: 12px;
+            font-style: italic;
+            line-height: 30px;
+        }
+        
+        .atf-user-card {
+            margin: 8px 0;
+            
+            img {display: inline-block;vertical-align: middle;}
+        }
+        
+        .atf-screen-name {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 5px;
+            font-size: 12px;
+            line-height: 12px;
+            
+            span {font-weight: bold}
+        }
+        
+        .atf-tweet-text {
+            margin:0;
+            margin-bottom: 8px;
+            font-size:13px;
+            line-height: 16px;
+            overflow: hidden;
+        }
+        
+        .atf-retweet-credits {
+            margin-bottom: 10px;
+            font-size:12px;
+            height: 20px;
+        }
+        
+        .atf-show-media-button {
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        
+        .atf-tweet-actions {
+            position: absolute;
+            bottom: -25px;
+            list-style: none;
+            margin: 5px 0;
+            right:5px;
+            font-size:12px;
+            
+            li {
+                display: inline;
+                margin-left: 7px;
+                
+                a {text-decoration: none;border: none;}
+            }
+        }
+    }
+    
+    &.atf-skin-default {
+        .atf-tweet-padder {padding-bottom: 20px} // Account for tweet actions
+    }
+    
+    &.atf-skin-simplistic {
+        .atf-tweet-padder {padding-bottom: 20px} // Account for tweet actions
+        .atf-tweet-wrapper{padding: 10px;}
+    }
+    
+    &.atf-skin-futuristic {
+        //height: 120px;
+        .atf-tweet-wrapper{padding: 10px;}
+    }
+    
+    &.atf-skin-talk-bubble {
+        .atf-user-card {margin: 8px 0;}
+    }
+}

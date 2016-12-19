@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="<?php echo AMARKAL_ASSETS_URL; ?>css/ui.min.css" />
+        <script src="<?php echo admin_url(); ?>load-scripts.php?c=1&load%5B%5D=jquery-core,jquery-migrate&ver=<?php global $wp_version; echo $wp_version ?>"></script>
+        <script src="<?php echo admin_url(); ?>load-scripts.php?c=1&load%5B%5D=jquery-query,jquery-color,jquery-ui-core,jquery-ui-widget,jquery-ui-mouse,jquery-ui-sortable&load%5B%5D=-playlist,jquery-ui-draggable,jquery-ui-slider,jquery-touch-punch,ir&load%5B%5D=is,wp-color-picker,jquery-ui-datepicker,jquery-ui-button,jquery-ui-spinner,jquery-ui-resizable&load%5B%5D=load&ver=<?php global $wp_version; echo $wp_version ?>"></script>
+        <script src="<?php echo AMARKAL_ASSETS_URL; ?>js/amarkal.min.js" ></script>
+        <style>
+            body {
+                font-family: "Open Sans",sans-serif;
+            }
+            .status-obj {
+                border-bottom: 1px solid silver;
+                display: table;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .status-obj:last-child {border:none}
+            .status-obj h3 {
+                display: table-cell;
+                width: 200px;
+                font-size: 16px;
+                vertical-align: middle;
+            }
+            .status-obj afw-ui-component {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        </style>
+    </head>
+    <body>
+        <?php
+        $resources = array(
+            'application' => array(
+                'rate_limit_status' => 'Usage Status'
+            ),
+            'statuses'    => array(
+                'user_timeline'     => 'User Timeline'
+            )
+            /**/
+        );
+        
+        $status = new TwitterFeed\Resource\Resource_status(array('resources' => implode(',', array_keys($resources)))); 
+        $resp = $status->perform_request();
+        if( isset( $resp->errors ) ): foreach( $resp->errors as $error ): ?>
+        <p><strong>Error: </strong><?php echo $error->message.' (code '.$error->code.')'; ?></p>
+        <?php endforeach; else: ?>
+            <p>This section shows the usage status for each resource type. Twitter resources are subject to the REST API rate limits, with different resources having different limits.</p>
+            <?php foreach( $resources as $resource => $param ): ?>
+                <?php foreach( $param as $type => $title ): ?>
+                    <div class="status-obj">
+                        <h3><?php echo $title ?></h3>
+                        <?php 
+                        $s = '/'.$resource.'/'.$type; 
+                        $status = $resp->resources->$resource->$s;
+                        $diff = $status->limit - $status->remaining;
+                        $val = is_numeric($diff) ? $diff : 0;
+                        $max = is_numeric($status->limit) ? $status->limit : 0;
+                        $pb = new \Amarkal\UI\Components\ProgressBar(array(
+                            'value' => $val,
+                            'max'   => $max
+                        ));
+                        $pb->render(true); 
+                        ?>
+                    </div>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </body>
+</html>
+<?php die(); ?>
+
+    

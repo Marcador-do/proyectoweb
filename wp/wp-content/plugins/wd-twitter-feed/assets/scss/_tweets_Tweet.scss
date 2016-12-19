@@ -1,0 +1,223 @@
+.atf-object {
+    .atf-tweet-wrapper {
+        box-sizing:content-box !important;
+        cursor: pointer;
+
+        .atf-media-wrapper {
+            margin: 5px 0;
+            display: none;
+            
+            img {
+                width: 100%;
+                border: 4px solid rgb(224, 224, 224);
+                box-sizing: border-box;
+            }
+            
+            .atf-video-container {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                
+                &.gif {
+                    video {width:100%}
+                }
+                
+                &.vine {
+                    height: 0;
+                    padding-bottom: 100%; /* Vines are perfect squares */
+
+                    .vine-embed {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &.youtube {
+                    height: 0;
+                    padding-bottom: 56.25%;
+                    padding-top: 30px; 
+                }
+
+                iframe,
+                object,
+                embed {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .atf-show-media-button {
+            font-size: 12px;
+            text-decoration: none;
+            cursor: pointer;
+
+            i {
+                font-size: 16px;
+                vertical-align: middle;
+            }
+        }
+    }
+    
+    /* Skins
+    ----------------------*/
+    
+    &.atf-skin-default {
+        .atf-tweet-wrapper {
+            background-color: transparent;
+        }
+        
+        .atf-tweet-actions li {
+            display:inline-block;
+            margin: 0 10px 0 0 !important;
+        }
+    }
+    
+    &.atf-skin-simplistic {
+        .atf-tweet-wrapper {
+            border: 1px solid #CCC;
+            padding: 0 10px;
+            background-color: white;
+            @include box-shadow( 1px 1px 5px rgba(0,0,0,0.1) );
+            @include border-radius( 5px );
+            @include box-sizing( border-box !important );
+
+            .atf-tweet-actions li {
+                display:inline-block;
+                margin: 0 10px 0 0 !important;
+            }
+        }
+    }
+    
+    &.atf-skin-futuristic {
+        .atf-tweet-wrapper {
+            position: relative;
+            z-index: 2;
+            background-color: transparent;
+            margin-bottom: 30px !important;
+            padding: 1px 10px 10px;
+            @include border-radius( 5px );
+            @include box-sizing( border-box !important );
+
+            &:before,
+            &:after {
+                border-color: #777;
+                z-index: -1;
+                background-color: transparent;
+                border-style: solid;
+                border-top-width: 2px;
+                border-bottom-width: 2px;
+                height:100%;
+                width:25px;
+                content:'.';
+                position:absolute;
+                color: transparent;
+                top:0;
+            }
+
+            &:before {
+                @include border-radius( 10px 0 0 10px );
+                border-left-width:2px;
+                border-right-width:0;
+                left:0;
+            }
+
+            &:after {
+                @include border-radius( 0 10px 10px 0 );
+                border-right-width:2px;
+                border-left-width:0;
+                right:0;
+            }
+
+            .atf-user-card {
+                margin-top:10px;
+            }
+
+            .atf-tweet-actions {
+                border-color: #777;
+                direction: rtl;
+                text-align:center;
+                position:absolute;
+                bottom:-18px;
+                border-width:2px;
+                border-style: solid;
+                border-radius:5px;
+                margin: 0 !important;
+                padding: 5px;
+                line-height: 14px;
+                font-size: 14px;
+
+                li {
+                    display:inline;
+                    margin: 10px !important;
+                }
+            }
+        }
+
+        &.atf-direction-ltr {
+            .atf-tweet-actions{ right:25px }
+        }
+        &.atf-direction-rtl {
+            .atf-tweet-actions{ left:25px }
+        }
+    }
+    
+    &.atf-skin-talk-bubble {
+    
+        .atf-tweet-wrapper {
+            border: 1px solid #CCC;
+            background-color: white;
+            position: relative;
+            margin-bottom: 40px !important;
+            padding: 1px 10px;
+            @include border-radius( 5px );
+            @include box-shadow( 1px 1px 5px rgba(0,0,0,0.1) );
+            @include box-sizing( border-box !important );
+
+            &:before,
+            &:after {
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                content: '.';
+                color: transparent;
+                position: absolute;
+            }
+
+            &:before {
+                border-color: #CCC transparent transparent transparent;
+                border-width: 15px 25px 0 0;
+                bottom: -15px;
+                left: 40px;
+            }
+
+            &:after {
+                border-color: #FFF transparent transparent transparent;
+                border-width: 13px 22px 0 0;
+                bottom: -13px;
+                left: 41px;
+            }
+
+            .atf-tweet-actions {
+                padding:0;
+
+                li {
+                    display:inline;
+                    margin: 0 10px 0 0 !important;
+                }
+            }
+        }
+
+        i.fa.fa-twitter {
+            position:absolute;
+            color:#21759b;
+            left:10px;
+            bottom:-30px;
+            font-size:25px;
+        }
+    }
+}

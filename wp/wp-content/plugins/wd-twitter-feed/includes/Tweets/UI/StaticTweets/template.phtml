@@ -1,0 +1,8 @@
+<!-- Static Tweets -->
+<div class="atf-object atf-static-tweets atf-skin-<?php echo $this->skin; ?> atf-direction-<?php echo $this->direction ?>">
+    <div class="atf-inner-wrapper">
+        <?php foreach( $this->tweets as $tweet ): ?>
+            <?php $tweet = new TwitterFeed\Tweets\UI\Tweet( $tweet, $this->settings ); $tweet->render(true); ?>
+        <?php endforeach; ?>
+    </div>
+</div>

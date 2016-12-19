@@ -1,0 +1,13 @@
+<div id="twitter-feed-debug-window">
+    <h2>Debug Window<i class="fa fa-times close-button"></i></h2>
+    <div class="box">
+        <ol>
+            <?php foreach($this->data as $data) : ?>
+                <li>
+                    <strong><?php echo $data['class']; ?> -> <?php echo $data['function']; ?>:</strong>
+                    <?php echo $data['message']; ?>
+                </li>
+            <?php endforeach; ?>
+        </ol>
+    </div>
+</div>
