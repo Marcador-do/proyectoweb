@@ -20,12 +20,14 @@
 					'3' => __('2 columnas: 2 noticias'),
 					'4' => __('1 columna: 4 noticias')
 					);
+				$test = 10;
 			}
 
 
 			function widget( $args, $instance ) {
 				extract( $args, EXTR_SKIP );
-
+				static $posted_id = array();
+				
 				global $wp_query;
 
 				$show_title = sanitize_text_field($instance["show_title"]);
@@ -70,6 +72,8 @@
 						$args['cat'] = $category; 
 					}
 
+					$args['post__not_in'] = $posted_id; 
+					
 					if(!empty($post_type)){
 						$args['post_type'] = $post_type; 						
 					}
@@ -97,7 +101,7 @@
 				
 				if($type_news == "1"){
 					while( $query_posts->have_posts()): $query_posts->the_post(); 
-					
+					$posted_id[] = get_the_id();
 					$data_post = types_render_field('data', array('output'=>'raw'));
 					$post_type_marcador = get_post_type();
 
@@ -192,7 +196,7 @@
 		<div class="row">
 			<?php
 			while( $query_posts->have_posts()): $query_posts->the_post(); 
-
+			$posted_id[] = get_the_id();
 			$categories = get_the_category();
 
 			?>
@@ -283,7 +287,10 @@ else if($type_news == "4") { ?>
 <!-- Marcador posts -->
 <div class="row marcador-post-list-full-row">
 
-	<?php while( $query_posts->have_posts()): $query_posts->the_post();  ?>
+	<?php 
+	while( $query_posts->have_posts()): $query_posts->the_post(); 
+	$posted_id[] = get_the_id();
+	 ?>
 
 	<div class="col-xs-12 marcador-post-list">
 		<div class="row">
@@ -368,7 +375,10 @@ else if($type_news == "4") { ?>
 
 <?php }  else if($type_news == "3") { ?>
 <div class="row">
-	<?php while( $query_posts->have_posts()): $query_posts->the_post();  ?>
+	<?php 
+	while( $query_posts->have_posts()): $query_posts->the_post(); 
+	$posted_id[] = get_the_id();
+	 ?>
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marcador-post-list card">
 		<div class="panel panel-default">
 			<div class="panel-heading">
