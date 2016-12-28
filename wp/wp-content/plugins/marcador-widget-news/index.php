@@ -138,7 +138,7 @@
 						<div class="col-xs-12">
 							<a class="marcador-hero-permalink" href="<?php the_permalink(); ?>">
 								<header class="marcador-hero-unit" >
-										<img src="<?php the_post_thumbnail_url("full"); ?>" width='100%' alt="<?php the_title(); ?>">
+								<img src="<?php the_post_thumbnail_url("large"); ?>" width='100%' alt="<?php the_title(); ?>">
 
 									<?php 
 
@@ -152,6 +152,7 @@
 												<h6><?php echo $status; ?></h6>
 											</div>
 											<span><?php echo $data_partido->away->name; ?></span>
+
 										</div>
 										<?php
 									} else {
@@ -166,106 +167,114 @@
 									?>
 								</header>
 							</a>
-							<p>
-								<?php 
-								if($show_author != '1'):
-									?>
-								<span class="author"><?php _e('Por'); ?> <?php the_author_posts_link(); ?></span> 
-							<?php endif; ?>
-
 							<?php 
-							if($show_date != '1'):
-								?>
-							<span class="date"><?php the_date('M d, Y'); ?></span>
-						<?php endif; ?>
-					</p>
-					<?php 
-					if($show_excerpt != '1'):
 
-						echo wp_trim_words(get_the_excerpt(),$excerpt_limit);
-					endif;
-					?>
+							if($post_type_marcador == 'marcador_partido' or !empty($data_post)){
+								?>	
+								<h1 class="heading">
+									<?php the_title(); ?>
+								</h1>
+								<?php } ?>
+								<p>
+									<?php 
+									if($show_author != '1'):
+										?>
+									<span class="author"><?php _e('Por'); ?> <?php the_author_posts_link(); ?></span> 
+								<?php endif; ?>
 
-				</div>
-			</article>
-			<!-- Edit Content -->
-			<?php    dt_get_link_edit(get_the_id()); ?>
-			<?php 
-			endwhile; 
-		}  else if($type_news == "2") { ?>
-		<div class="row">
-			<?php
-			while( $query_posts->have_posts()): $query_posts->the_post(); 
-			$posted_id[] = get_the_id();
-			$categories = get_the_category();
+								<?php 
+								if($show_date != '1'):
+									?>
+								<span class="date"><?php the_date('M d, Y'); ?></span>
+							<?php endif; ?>
+						</p>
+						<?php 
+						if($show_excerpt != '1'):
 
-			?>
-			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 marcador-post-list">
-				<div class="row">
-					<div class="col-xs-4 col-sm-5 marcador-post-list-image-col">
-						<a href="<?php the_permalink(); ?>">
-							<?php if ( has_post_thumbnail($post->ID) ): ?>
-							<div class="marcador-post-list-image" style="background-image: url('');">
-							<img src="<?php the_post_thumbnail_url("medium"); ?>" width='100%' alt="<?php the_title(); ?>">
-							</div>
-						<?php else: ?>
-						<div class="marcador-post-list-image"></div>
-					<?php endif; ?>
-				</a>
-			</div>
-			<div class="col-xs-8 col-sm-7">
-				<div class="marcador-post-list-content">
-
-					<div class="marcador-post-list-category">
-						<?php foreach($categories as $cat): 
-						if($cat->term_id != $category) {
-							continue;
-						}
+							echo wp_trim_words(get_the_excerpt(),$excerpt_limit);
+						endif;
 						?>
-						<a href="<?php echo get_category_link($cat->term_id); ?>" rel="category tag"><?php echo $cat->name; ?></a>
-					<?php endforeach; ?>
-				</div>
-				<?php if($show_title != '1'): ?>
-				<div class="marcador-post-list-title">
-					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-				</div>
-			<?php endif; ?>
 
-			<div class="marcador-post-list-meta">
-				<?php if($show_author != '1'): ?>
-				<div class="marcador-post-list-author">
-					<?php the_author_posts_link(); ?>
-				</div>
-			<?php endif; ?>
-			<?php if($show_date != '1'): ?>
-			<div class="marcador-post-list-date">
-				<a href="#date-link">
-					<?php the_date('M d, Y'); ?>
-				</a> 
-			</div>
-		<?php endif; ?>
-		<?php 
+					</div>
+				</article>
+				<!-- Edit Content -->
+				<?php    dt_get_link_edit(get_the_id()); ?>
+				<?php 
+				endwhile; 
+			}  else if($type_news == "2") { ?>
+				<div class="row">
+					<?php
+					while( $query_posts->have_posts()): $query_posts->the_post(); 
+					$posted_id[] = get_the_id();
+					$categories = get_the_category();
+
+					?>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 marcador-post-list">
+						<div class="row">
+							<div class="col-xs-4 col-sm-5 marcador-post-list-image-col">
+								<a href="<?php the_permalink(); ?>">
+									<?php if ( has_post_thumbnail($post->ID) ): ?>
+									<div class="marcador-post-list-image" style="background-image: url('');">
+										<img src="<?php the_post_thumbnail_url("thumbnail"); ?>" width='100%' alt="<?php the_title(); ?>">
+									</div>
+								<?php else: ?>
+								<div class="marcador-post-list-image"></div>
+							<?php endif; ?>
+						</a>
+					</div>
+					<div class="col-xs-8 col-sm-7">
+						<div class="marcador-post-list-content">
+
+							<div class="marcador-post-list-category">
+								<?php foreach($categories as $cat): 
+								if($cat->term_id != $category) {
+									continue;
+								}
+								?>
+								<a href="<?php echo get_category_link($cat->term_id); ?>" rel="category tag"><?php echo $cat->name; ?></a>
+							<?php endforeach; ?>
+						</div>
+						<?php if($show_title != '1'): ?>
+						<div class="marcador-post-list-title">
+							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						</div>
+					<?php endif; ?>
+
+					<div class="marcador-post-list-meta">
+						<?php if($show_author != '1'): ?>
+						<div class="marcador-post-list-author">
+							<?php the_author_posts_link(); ?>
+						</div>
+					<?php endif; ?>
+					<?php if($show_date != '1'): ?>
+					<div class="marcador-post-list-date">
+						<a href="#date-link">
+							<?php the_date('M d, Y'); ?>
+						</a> 
+					</div>
+				<?php endif; ?>
+				<?php 
                   // Check user session
-		if ( is_user_logged_in() ): 
+				if ( is_user_logged_in() ): 
                     // Check user role
-			$user = new WP_User( $user_ID );
-		$marcador_user_role = 'marcador_contributor';
-		$is_colaborator = array_search(
-			$marcador_user_role, 
-			$user->roles, true
-			);
-		if ($is_colaborator !== false && $is_colaborator >= 0):
+					$user = new WP_User( $user_ID );
+				$marcador_user_role = 'marcador_contributor';
+				$is_colaborator = array_search(
+					$marcador_user_role, 
+					$user->roles, true
+					);
+				if ($is_colaborator !== false && $is_colaborator >= 0):
                       // TODO: Check Favoritos
-			?>
-		<!-- Conditional -->
-		<div class="marcador-post-list-fav">
-			<i class="material-icons">star</i>
-		</div>
-		<!-- end conditional -->
-	<?php endif; ?>
-<?php endif; ?>
-</div>
-<?php if($show_excerpt != '1'): ?>
+					?>
+				<!-- Conditional -->
+				<div class="marcador-post-list-fav">
+					<i class="material-icons">star</i>
+				</div>
+				<!-- end conditional -->
+			<?php endif; ?>
+		<?php endif; ?>
+	</div>
+	<?php if($show_excerpt != '1'): ?>
 	<div class="marcador-post-list-excerpt">
 		<?php echo wp_trim_words(get_the_excerpt(),$excerpt_limit); ?>
 	</div>
@@ -285,29 +294,29 @@
 else if($type_news == "4") { ?>
 
 
-<!-- Marcador posts -->
-<div class="row marcador-post-list-full-row">
+	<!-- Marcador posts -->
+	<div class="row marcador-post-list-full-row">
 
-	<?php 
-	while( $query_posts->have_posts()): $query_posts->the_post(); 
-	$posted_id[] = get_the_id();
-	 ?>
+		<?php 
+		while( $query_posts->have_posts()): $query_posts->the_post(); 
+		$posted_id[] = get_the_id();
+		?>
 
-	<div class="col-xs-12 marcador-post-list">
-		<div class="row">
-			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 marcador-post-list-image-col">
-				<a href="<?php echo esc_url( get_permalink() ); ?>">
-					
-				<div class="marcador-post-list-image">
-					<img src="<?php the_post_thumbnail_url("medium"); ?>" width='100%' alt="<?php the_title(); ?>">
+		<div class="col-xs-12 marcador-post-list">
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 marcador-post-list-image-col">
+					<a href="<?php echo esc_url( get_permalink() ); ?>">
+
+						<div class="marcador-post-list-image">
+							<img src="<?php the_post_thumbnail_url("thumbnail"); ?>" width='100%' alt="<?php the_title(); ?>">
+						</div>
+					</a> 
 				</div>
-			</a> 
-		</div>
-		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-10">
-			<div class="marcador-post-list-content">
-				<?php 
-				$categories = get_the_category();
-				$category = $categories[0]->name; 
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-10">
+					<div class="marcador-post-list-content">
+						<?php 
+						$categories = get_the_category();
+						$category = $categories[0]->name; 
 	                	$category_id = $categories[0]->term_id; // var_dump($categories[0]); 
 	                	$cat_count = count( $categories ) - 1;
 	                	$c = 0;
@@ -375,24 +384,24 @@ else if($type_news == "4") { ?>
 
 
 <?php }  else if($type_news == "3") { ?>
-<div class="row">
-	<?php 
-	while( $query_posts->have_posts()): $query_posts->the_post(); 
-	$posted_id[] = get_the_id();
-	 ?>
-	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marcador-post-list card">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<div class="marcador-post-list-title">
-					<a href="<?php echo esc_url( get_permalink() ); ?>">
-						<?php the_title(); ?>
-					</a>
+	<div class="row">
+		<?php 
+		while( $query_posts->have_posts()): $query_posts->the_post(); 
+		$posted_id[] = get_the_id();
+		?>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 marcador-post-list card">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="marcador-post-list-title">
+						<a href="<?php echo esc_url( get_permalink() ); ?>">
+							<?php the_title(); ?>
+						</a>
+					</div>
 				</div>
-			</div>
-			<div class="panel-body">
-				<?php 
-				$categories   = get_the_category();
-				$category     = $categories[0]->name; 
+				<div class="panel-body">
+					<?php 
+					$categories   = get_the_category();
+					$category     = $categories[0]->name; 
                 $category_id  = $categories[0]->term_id; // var_dump($categories[0]); 
                 $cat_count    = count( $categories ) - 1;
                 $c            = 0; ?>
@@ -567,24 +576,24 @@ function form( $instance ) {
 
 
 	<style>
-	.widget-news-backend{
-		font-size:16px;
-	}
-	.widget-news-backend label{
-		display: block;
+		.widget-news-backend{
+			font-size:16px;
+		}
+		.widget-news-backend label{
+			display: block;
 
-	}
-	.widget-news-backend label input[type=text],
-	.widget-news-backend label input[type=number],
+		}
+		.widget-news-backend label input[type=text],
+		.widget-news-backend label input[type=number],
 
-	.widget-news-backend label select
-	{
-		font-weight:normal;
-		font-size:14px;
-		height:40px;
-		padding:0 10px;
-		margin-top:10px;
-	}
+		.widget-news-backend label select
+		{
+			font-weight:normal;
+			font-size:14px;
+			height:40px;
+			padding:0 10px;
+			margin-top:10px;
+		}
 
 	</style>
 	<div class="widget-news-backend">
