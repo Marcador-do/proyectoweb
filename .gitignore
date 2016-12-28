@@ -17,3 +17,5 @@
 /sitemap.xml.gz
 
 vendor/
+.idea/
+.DS_Store
