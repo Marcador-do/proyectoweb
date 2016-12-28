@@ -139,7 +139,7 @@
 							<a class="marcador-hero-permalink" href="<?php the_permalink(); ?>">
 								<header class="marcador-hero-unit">
 									<img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>" width='100%'>
-
+	
 									<?php 
 
 									if($post_type_marcador == 'marcador_partido' or !empty($data_post)){
