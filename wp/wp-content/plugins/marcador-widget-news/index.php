@@ -138,7 +138,7 @@
 						<div class="col-xs-12">
 							<a class="marcador-hero-permalink" href="<?php the_permalink(); ?>">
 								<header class="marcador-hero-unit">
-<img src="<?php the_post_thumbnail_url('full'); ?>" alt="" width='100%'>
+									<img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>" width='100%'>
 
 									<?php 
 
@@ -298,7 +298,7 @@ else if($type_news == "4") { ?>
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 marcador-post-list-image-col">
 				<a href="<?php echo esc_url( get_permalink() ); ?>">
 					<?php if( has_post_thumbnail( get_the_id()) ): ?>
-					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'full' ); ?>
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium' ); ?>
 				<?php endif; ?>
 				<div class="marcador-post-list-image" style="background-image: url('<?php echo $image[0]; ?>') "></div>
 			</a> 
@@ -412,7 +412,7 @@ else if($type_news == "4") { ?>
 <a href="<?php echo esc_url( get_permalink() ); ?>">
 	<?php if( has_post_thumbnail( get_the_id()) ): ?>
 	<div class="panel-body marcador-post-list-image" style="background-image: url('<?php echo $image[0]; ?>')">
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'full' ); ?>
+		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium' ); ?>
 	</div>
 <?php endif; ?>
 </a> 
