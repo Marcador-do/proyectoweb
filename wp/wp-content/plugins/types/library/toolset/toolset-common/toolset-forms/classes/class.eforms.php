@@ -711,7 +711,7 @@ class Enlimbo_Forms {
         $element['_render']['element'] .= sprintf(' data-wpt-type="%s"', __FUNCTION__);
         $element['_render']['element'] .= $this->_getDataWptId($element);
 
-        /**
+        /*
          * Add html attribute value=""
          *
          * We have key #value and we also have #default-value key
@@ -725,9 +725,16 @@ class Enlimbo_Forms {
          *
          * To get things right we flip the usage of Types fields to handle it the same way as CRED does
          *
+         * The fact that a field comes from Types is determined from its name (sic!). This is very fragile.
+         *
          * START Todo: Types should deliver the correct values instead of flipping it here
          */
-        if( strpos( $element['#name'], 'wpcf[' ) === 0 ) {
+        $is_types_field = (
+	        ( strpos( $element['#name'], 'wpcf[' ) === 0 )
+	        || ( strpos( $element['#name'], 'wpcf_post_relationship[' ) === 0 )
+        );
+
+        if( $is_types_field ) {
             $tmp_value = $element['#value'];
 
             $element['#value'] = array_key_exists( '#default_value', $element )

@@ -267,6 +267,14 @@
 	display: none;
 }
 
+/* Unstyle spans on video embeds */
+.tiny-wym span.mce-shim,
+.tiny-wym span.wpview-end {
+	background: transparent;
+	border: none;
+	padding: 0;
+}
+
 /* Images & Captions =============================== */
 .tiny-wym img {
 	margin: 5px 0;

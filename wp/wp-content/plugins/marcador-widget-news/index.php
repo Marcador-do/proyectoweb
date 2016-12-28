@@ -137,8 +137,8 @@
 					<article class="row marcador-hero-post">
 						<div class="col-xs-12">
 							<a class="marcador-hero-permalink" href="<?php the_permalink(); ?>">
-								<header class="marcador-hero-unit" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>');">
-
+								<header class="marcador-hero-unit">
+<img src="<?php the_post_thumbnail_url('full'); ?>" alt="" width='100%'>
 
 									<?php 
 
@@ -205,7 +205,8 @@
 					<div class="col-xs-4 col-sm-5 marcador-post-list-image-col">
 						<a href="<?php the_permalink(); ?>">
 							<?php if ( has_post_thumbnail($post->ID) ): ?>
-							<div class="marcador-post-list-image" style="background-image: url('<?php the_post_thumbnail_url("thumbnail"); ?>');">
+								<img src="<?php the_post_thumbnail_url("medium"); ?>" width='100%' alt="">
+							
 							</div>
 						<?php else: ?>
 						<div class="marcador-post-list-image"></div>

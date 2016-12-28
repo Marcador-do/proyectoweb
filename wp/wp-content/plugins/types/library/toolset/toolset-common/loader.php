@@ -8,7 +8,7 @@
 * plugin loader and then call the toolset_common_initialize function.
 * The toolset_common_initialize should be passed the file path to the directory
 * where this file is located and also the url to this directory.
-* Note that both the path and URL will be normalized with untrailingslashit 
+* Note that both the path and URL will be normalized with untrailingslashit
 * so they do not pack any trailing slash.
 *
 * 
@@ -30,7 +30,7 @@
  * Now that we have a unique version for all plugins
  * we define the version here
  */
-$toolset_common_version = 225000;
+$toolset_common_version = 226000;
 
 
 // ----------------------------------------------------------------------//
@@ -76,7 +76,7 @@ if ( ! function_exists( 'toolset_common_initialize' ) ) {
         global $toolset_common_paths;
 
         $path = str_replace( '\\', '/', $path );
-		
+
 		$path	= untrailingslashit( $path );
 		$url	= untrailingslashit( $url );
         

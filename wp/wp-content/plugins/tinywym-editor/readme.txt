@@ -2,8 +2,8 @@
 Contributors: arickards
 Tags: tinyMCE, WYSIWYM, WYSIWYG, WP Editor, visual editor, editor, tinywym
 Requires at least: 4.2.0
-Tested up to: 4.5
-Stable tag: 1.2.4
+Tested up to: 4.6.1
+Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,6 +77,14 @@ tinyWYM Editor adds a button to the editor toolbar. Click it to toggle tinyWYM s
 
 == Changelog ==
 
+= 1.2.6 =
+
+* Fix bug with various embeds not always showing.
+
+= 1.2.5 =
+
+* Quick update for WordPress 4.6 compatability.
+
 = 1.2.4 =
 
 * Quick update for WordPress 4.5 compatability.
@@ -124,6 +132,14 @@ tinyWYM Editor adds a button to the editor toolbar. Click it to toggle tinyWYM s
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.2.6 =
+
+* This update fixes a bug that made video and other embeds not always show.
+
+= 1.2.5 =
+
+* Quick update for WordPress 4.6 compatability.
 
 = 1.2.4 =
 
