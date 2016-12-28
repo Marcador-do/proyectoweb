@@ -137,8 +137,8 @@
 					<article class="row marcador-hero-post">
 						<div class="col-xs-12">
 							<a class="marcador-hero-permalink" href="<?php the_permalink(); ?>">
-								<header class="marcador-hero-unit" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>');">
-
+								<header class="marcador-hero-unit" >
+										<img src="<?php the_post_thumbnail_url("full"); ?>" width='100%' alt="<?php the_title(); ?>">
 
 									<?php 
 
