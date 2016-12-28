@@ -137,9 +137,9 @@
 					<article class="row marcador-hero-post">
 						<div class="col-xs-12">
 							<a class="marcador-hero-permalink" href="<?php the_permalink(); ?>">
-								<header class="marcador-hero-unit">
-									<img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>" width='100%'>
-	
+								<header class="marcador-hero-unit" style="background-image: url('<?php echo the_post_thumbnail_url(); ?>');">
+
+
 									<?php 
 
 									if($post_type_marcador == 'marcador_partido' or !empty($data_post)){
@@ -205,8 +205,8 @@
 					<div class="col-xs-4 col-sm-5 marcador-post-list-image-col">
 						<a href="<?php the_permalink(); ?>">
 							<?php if ( has_post_thumbnail($post->ID) ): ?>
-								<img src="<?php the_post_thumbnail_url("medium"); ?>" width='100%' alt="">
-							
+							<div class="marcador-post-list-image" style="background-image: url('');">
+							<img src="<?php the_post_thumbnail_url("medium"); ?>" width='100%' alt="<?php the_title(); ?>">
 							</div>
 						<?php else: ?>
 						<div class="marcador-post-list-image"></div>
@@ -297,10 +297,10 @@ else if($type_news == "4") { ?>
 		<div class="row">
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2 marcador-post-list-image-col">
 				<a href="<?php echo esc_url( get_permalink() ); ?>">
-					<?php if( has_post_thumbnail( get_the_id()) ): ?>
-					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium' ); ?>
-				<?php endif; ?>
-				<div class="marcador-post-list-image" style="background-image: url('<?php echo $image[0]; ?>') "></div>
+					
+				<div class="marcador-post-list-image">
+					<img src="<?php the_post_thumbnail_url("medium"); ?>" width='100%' alt="<?php the_title(); ?>">
+				</div>
 			</a> 
 		</div>
 		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-10">
@@ -411,8 +411,8 @@ else if($type_news == "4") { ?>
 </div>
 <a href="<?php echo esc_url( get_permalink() ); ?>">
 	<?php if( has_post_thumbnail( get_the_id()) ): ?>
-	<div class="panel-body marcador-post-list-image" style="background-image: url('<?php echo $image[0]; ?>')">
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_id() ), 'medium' ); ?>
+	<div class="panel-body marcador-post-list-image" >
+		<img src="<?php the_post_thumbnail_url("medium"); ?>" width='100%' alt="<?php the_title(); ?>">
 	</div>
 <?php endif; ?>
 </a> 
