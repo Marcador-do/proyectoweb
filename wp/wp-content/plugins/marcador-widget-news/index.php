@@ -186,7 +186,7 @@
 								if($show_date != '1'):
 									?>
 								<span class="date">
-									<?php the_date('M d, Y'); ?>
+									<?php echo get_the_date('M d, Y'); ?>
 										<!-- Conditional -->
 									<span class="marcador-post-list-fav">
 									<i class="material-icons">star</i>
@@ -255,7 +255,7 @@
 					<?php if($show_date != '1'): ?>
 						<div class="marcador-post-list-date">
 						<a href="#date-link">
-							<?php the_date('M d, Y'); ?>
+							<?php echo get_the_date('M d, Y'); ?>
 						</a> 
 						<!-- Conditional -->
 							<div class="marcador-post-list-fav">
@@ -366,7 +366,7 @@ else if($type_news == "4") { ?>
                 		</div>
                 		<div class="marcador-post-list-date">
                   			<a href="<?php echo esc_url( get_day_link( $year = get_the_date('Y') , $month = get_the_date('m'), $day = get_the_date('d') ) ) ?>">
-                    			<?php the_date('M d, Y', ''); ?>
+                    			<?php echo get_the_date('M d, Y', ''); ?>
                   			</a> 
             			</div>
 
@@ -449,7 +449,7 @@ else if($type_news == "4") { ?>
                 		</div>
                 		<div class="marcador-post-list-date">
                   			<a href="<?php echo esc_url( get_day_link( $year = get_the_date('Y') , $month = get_the_date('m'), $day = get_the_date('d') ) ) ?>">
-                    			<?php the_date('M d, Y', ''); ?>
+                    			<?php echo get_the_date('M d, Y', ''); ?>
                   			</a> 
 
                   			 <!-- Conditional -->
