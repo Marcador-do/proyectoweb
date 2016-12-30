@@ -185,7 +185,13 @@
 								<?php 
 								if($show_date != '1'):
 									?>
-								<span class="date"><?php the_date('M d, Y'); ?></span>
+								<span class="date">
+									<?php the_date('M d, Y'); ?>
+										<!-- Conditional -->
+									<span class="marcador-post-list-fav">
+									<i class="material-icons">star</i>
+									</span>
+								</span>
 							<?php endif; ?>
 						</p>
 						<?php 
@@ -211,7 +217,7 @@
 					?>
 					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 marcador-post-list">
 						<div class="row">
-							<div class="col-xs-4 col-sm-5 marcador-post-list-image-col">
+							<div class="col-xs-4  marcador-post-list-image-col">
 								<a href="<?php the_permalink(); ?>">
 									<?php if ( has_post_thumbnail($post->ID) ): ?>
 									<div class="marcador-post-list-image" style="background-image: url('');">
@@ -251,6 +257,10 @@
 						<a href="#date-link">
 							<?php the_date('M d, Y'); ?>
 						</a> 
+						<!-- Conditional -->
+							<div class="marcador-post-list-fav">
+								<i class="material-icons">star</i>
+							</div>
 						</div>
 
 				<?php endif; ?>
@@ -418,8 +428,8 @@ else if($type_news == "4") { ?>
 </div>
 <a href="<?php echo esc_url( get_permalink() ); ?>">
 	<?php if( has_post_thumbnail( get_the_id()) ): ?>
-	<div class="panel-body marcador-post-list-image" >
-		<img src="<?php the_post_thumbnail_url("medium"); ?>" width='100%' alt="<?php the_title(); ?>">
+	<div class="marcador-post-list-image_b">
+			<img src="<?php the_post_thumbnail_url("medium"); ?>" width='100%' alt="<?php the_title(); ?>">
 	</div>
 <?php endif; ?>
 </a> 
