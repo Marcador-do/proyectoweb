@@ -144,14 +144,14 @@
 
 									if($post_type_marcador == 'marcador_partido' or !empty($data_post)){
 										?>
-										<div class="scoreboard">
+										<div class="scoreboard row">
 
-											<span><?php echo $data_partido->home->name; ?></span>
+											<div class="team-1 col-xs-6"><?php echo $data_partido->home->name; ?></div>
 											<div class="board">
 												<div><span><?php echo $data_partido->home->runs; ?></span><span> <?php echo $data_partido->away->runs; ?></span></div>
-												<h6><?php echo $status; ?></h6>
+												<div><?php echo $status; ?></div>
 											</div>
-											<span><?php echo $data_partido->away->name; ?></span>
+											<div class="team-2 col-xs-6"><?php echo $data_partido->away->name; ?></div>
 
 										</div>
 										<?php
