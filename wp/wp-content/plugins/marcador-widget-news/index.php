@@ -247,11 +247,12 @@
 						</div>
 					<?php endif; ?>
 					<?php if($show_date != '1'): ?>
-					<div class="marcador-post-list-date">
+						<div class="marcador-post-list-date">
 						<a href="#date-link">
 							<?php the_date('M d, Y'); ?>
 						</a> 
-					</div>
+						</div>
+
 				<?php endif; ?>
 				<?php 
                   // Check user session
@@ -348,20 +349,17 @@ else if($type_news == "4") { ?>
 	    </div>
 	<?php endif; ?>
 	<div class="marcador-post-list-meta">
-		<?php if($show_author != '1'): ?>
-		<div class="marcador-post-list-author">
-			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
-				<?php echo get_the_author_meta( 'user_nicename' ); ?>
-			</a>
-		</div>
-	<?php endif; ?>
-	<?php if($show_authordate != '1'): ?>
-	<div class="marcador-post-list-date">
-		<a href="<?php echo esc_url( get_day_link( $year = get_the_date('Y') , $month = get_the_date('m'), $day = get_the_date('d') ) ) ?>">
-			<?php the_date('M d, Y', '<div class="meta-divisor"></div>', ''); ?>
-		</a> 
-	</div>
-<?php endif; ?>
+                		<div class="marcador-post-list-author">
+                			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
+                				<?php echo get_the_author_meta( 'user_nicename' ); ?>
+                			</a>
+                		</div>
+                		<div class="marcador-post-list-date">
+                  			<a href="<?php echo esc_url( get_day_link( $year = get_the_date('Y') , $month = get_the_date('m'), $day = get_the_date('d') ) ) ?>">
+                    			<?php the_date('M d, Y', ''); ?>
+                  			</a> 
+            			</div>
+
 <!-- Conditional if favorite -->
 <div class="marcador-post-list-fav">
 	<i class="material-icons">star</i>
@@ -398,7 +396,7 @@ else if($type_news == "4") { ?>
 						</a>
 					</div>
 				</div>
-				<div class="panel-body">
+				<div class="panel-body-1">
 					<?php 
 					$categories   = get_the_category();
 					$category     = $categories[0]->name; 
@@ -434,32 +432,24 @@ else if($type_news == "4") { ?>
 <?php endif; ?>
 <div class="panel-footer">
 	<div class="marcador-post-list-meta">
-		<div class="row">
-			<?php if($show_author != '1'): ?>
-			<div class="col-xs-6 col-md-4 col-md-push-4 marcador-post-list-author">
+                		<div class="marcador-post-list-author">
+                			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
+                				<?php echo get_the_author_meta( 'user_nicename' ); ?>
+                			</a>
+                		</div>
+                		<div class="marcador-post-list-date">
+                  			<a href="<?php echo esc_url( get_day_link( $year = get_the_date('Y') , $month = get_the_date('m'), $day = get_the_date('d') ) ) ?>">
+                    			<?php the_date('M d, Y', ''); ?>
+                  			</a> 
 
-				<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
-					<?php echo get_the_author_meta( 'user_nicename' ); ?>
-				</a>
+                  			 <!-- Conditional -->
+	                          <div class="marcador-post-list-fav">
+	                            <i class="material-icons">star</i>
+	                          </div>
+            			</div>
 
-			</div>
-		<?php endif; ?>
-		<div class="col-xs-6 col-md-4 col-md-push-4 marcador-post-list-date">
-			<?php 
-			$before = ''; 
-			$before .= '<a href="' . esc_url( get_day_link( $year = get_the_date('Y') , $month = get_the_date('m'), $day = get_the_date('d') ) ) . '">';
-			$after = '</a>';
-			?>
 
-			<?php 
-			if($show_date != '1'):
-				the_date( $d = 'M d, Y', $before, $after, $echo = true );
-			endif;
-			?>
-			<i class="material-icons marcador-post-list-fav">star</i></div>
-
-		</div>
-	</div>
+    </div>
 
 	<!-- Conditional if favorite -->
 
