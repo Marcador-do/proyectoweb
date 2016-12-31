@@ -187,10 +187,13 @@
 									?>
 								<span class="date">
 									<?php echo get_the_date('M d, Y'); ?>
+
+									<?php if(check_favorite_category_user(wp_get_post_categories(get_the_id()))): ?>
 										<!-- Conditional -->
 									<span class="marcador-post-list-fav">
 									<i class="material-icons">star</i>
 									</span>
+								<?php endif; ?>
 								</span>
 							<?php endif; ?>
 						</p>
@@ -212,7 +215,7 @@
 					<?php
 					while( $query_posts->have_posts()): $query_posts->the_post(); 
 					$posted_id[] = get_the_id();
-					$categories = get_the_category();
+					$categories = wp_get_post_categories(get_the_id());
 
 					?>
 					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 marcador-post-list">
@@ -257,10 +260,12 @@
 						<a href="#date-link">
 							<?php echo get_the_date('M d, Y'); ?>
 						</a> 
+						<?php if(check_favorite_category_user(wp_get_post_categories(get_the_id()))): ?>
 						<!-- Conditional -->
 							<div class="marcador-post-list-fav">
 								<i class="material-icons">star</i>
 							</div>
+						<?php endif; ?>
 						</div>
 
 				<?php endif; ?>
@@ -326,7 +331,7 @@ else if($type_news == "4") { ?>
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-10">
 					<div class="marcador-post-list-content">
 						<?php 
-						$categories = get_the_category();
+						$categories = wp_get_post_categories(get_the_id());
 						$category = $categories[0]->name; 
 	                	$category_id = $categories[0]->term_id; // var_dump($categories[0]); 
 	                	$cat_count = count( $categories ) - 1;
@@ -370,10 +375,12 @@ else if($type_news == "4") { ?>
                   			</a> 
             			</div>
 
-<!-- Conditional if favorite -->
-<div class="marcador-post-list-fav">
-	<i class="material-icons">star</i>
-</div>
+            			<?php if(check_favorite_category_user(wp_get_post_categories(get_the_id()))): ?>
+            				<!-- Conditional -->
+            				<div class="marcador-post-list-fav">
+            					<i class="material-icons">star</i>
+            				</div>
+            			<?php endif; ?>
 <!-- end conditional -->
 </div>
 </div>
@@ -408,7 +415,7 @@ else if($type_news == "4") { ?>
 				</div>
 				<div class="panel-body-1">
 					<?php 
-					$categories   = get_the_category();
+					$categories   = wp_get_post_categories(get_the_id());
 					$category     = $categories[0]->name; 
                 $category_id  = $categories[0]->term_id; // var_dump($categories[0]); 
                 $cat_count    = count( $categories ) - 1;
@@ -452,10 +459,12 @@ else if($type_news == "4") { ?>
                     			<?php echo get_the_date('M d, Y', ''); ?>
                   			</a> 
 
-                  			 <!-- Conditional -->
-	                          <div class="marcador-post-list-fav">
-	                            <i class="material-icons">star</i>
-	                          </div>
+                  			 	<?php if(check_favorite_category_user(wp_get_post_categories(get_the_id()))): ?>
+		            				<!-- Conditional -->
+		            				<div class="marcador-post-list-fav">
+		            					<i class="material-icons">star</i>
+		            				</div>
+		            			<?php endif; ?>
             			</div>
 
 
