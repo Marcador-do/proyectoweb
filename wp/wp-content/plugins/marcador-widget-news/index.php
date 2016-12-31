@@ -149,7 +149,7 @@
 											<div class="team-1 col-xs-6"><?php echo $data_partido->home->name; ?></div>
 											<div class="board">
 												<div><span><?php echo $data_partido->home->runs; ?></span><span> <?php echo $data_partido->away->runs; ?></span></div>
-												<div><?php echo $status; ?></div>
+												<div class="status"><?php echo $status; ?></div>
 											</div>
 											<div class="team-2 col-xs-6"><?php echo $data_partido->away->name; ?></div>
 
