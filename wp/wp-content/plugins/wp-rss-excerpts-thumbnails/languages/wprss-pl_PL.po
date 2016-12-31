@@ -1,0 +1,311 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP RSS Aggregator - Excerpts & Thumbnails\n"
+"POT-Creation-Date: 2015-04-15 18:51+0800\n"
+"PO-Revision-Date: 2015-04-15 18:51+0800\n"
+"Last-Translator: Mariusz Malachowski <hello@malachowski.co.uk>\n"
+"Language-Team: WP RSS Aggregator <info@wprssaggregator.com>\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: _e;__;esc_attr__;esc_attr_e;esc_html__;esc_html_e;_x;"
+"_ex;esc_attr_x;esc_html_x;_n;_nx;_n_noop;_nx_noop\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../includes/admin-display.php:18
+msgid "Thumbnail"
+msgstr "Miniaturki"
+
+#: ../includes/admin-settings.php:24
+msgid "Excerpt Settings"
+msgstr "Ustawienia zajawki"
+
+#: ../includes/admin-settings.php:31
+msgid "Thumbnail Settings"
+msgstr "Ustawienia miniaturki"
+
+#: ../includes/admin-settings.php:38
+msgid "Enable excerpts"
+msgstr "Włącz zajawkę"
+
+#: ../includes/admin-settings.php:46
+msgid "Excerpts word limit"
+msgstr "Limit słów w zajawce"
+
+#: ../includes/admin-settings.php:54
+msgid "Excerpts ending"
+msgstr "Zakończenie zajawki"
+
+#: ../includes/admin-settings.php:70
+msgid "Enable \"Read more\" link"
+msgstr "Włącz \"Czytaj więcej\" link"
+
+#: ../includes/admin-settings.php:78
+msgid "Read more text"
+msgstr "Tekst czytaj"
+
+#: ../includes/admin-settings.php:86
+msgid "Enable thumbnails"
+msgstr "Włącz miniaturki"
+
+#: ../includes/admin-settings.php:94
+msgid "Default thumbnail image"
+msgstr "Domyślny obrazek miniaturki"
+
+#: ../includes/admin-settings.php:102
+msgid "Thumbnail image width"
+msgstr "Szerokość miniaturki"
+
+#: ../includes/admin-settings.php:110
+msgid "Thumbnail image height"
+msgstr "Wysokość miniaturki"
+
+#: ../includes/admin-settings.php:118
+msgid "Link thumbnail to permalink"
+msgstr "Link z miniaturki do wpisu"
+
+#: ../includes/admin-settings.php:126
+msgid "When feed item has no thumbnail"
+msgstr "Gdy kanał nie ma miniaturki"
+
+#: ../includes/admin-settings.php:134
+msgid "Image to use as thumbnail"
+msgstr "Obrazek jako miniaturka"
+
+#: ../includes/admin-settings.php:142
+msgid "Enable social buttons"
+msgstr "Włącz social przyciski"
+
+#: ../includes/admin-settings.php:150
+msgid "Twitter: Share via user"
+msgstr "Twitter: Podziel się"
+
+#: ../includes/admin-settings.php:160
+msgid "Default thumbnail image preview"
+msgstr "Domyślny podgląd miniaturki"
+
+#: ../includes/admin-settings.php:170
+msgid "Excerpts & Thumbnails License"
+msgstr "Licencja dodatku Excerpts & Thumbnails"
+
+#: ../includes/admin-settings.php:177
+msgid "License Key"
+msgstr "﻿Numer seryjny"
+
+#: ../includes/admin-settings.php:185 ../includes/admin-settings.php:459
+msgid "Activate License"
+msgstr "﻿Aktywacja licencji"
+
+#: ../includes/admin-settings.php:202
+#, php-format
+msgid ""
+"Settings for feed item excerpts, via the <a href=\"%s\">Excerpts & "
+"Thumbnails</a> add-on."
+msgstr "Tutorial do <a href=\"%s\">Excerpts & Thumbnails</a> dodatku."
+
+#: ../includes/admin-settings.php:215
+#, php-format
+msgid ""
+"Settings for thumbnails, via the <a href=\"%s\">Excerpts & Thumbnails</a> "
+"add-on."
+msgstr ""
+"Tutorial do ustawienia <a href=\"%s\">Excerpts & Thumbnails</a> dodatku."
+
+#: ../includes/admin-settings.php:228
+msgid "Check this box to enable excerpt functionality"
+msgstr "Zaznacz to pole, aby włączyć zajawki"
+
+#: ../includes/admin-settings.php:239
+msgid "The number of words used in the excerpt displayed"
+msgstr "Liczba słów użytych w zajewce"
+
+#: ../includes/admin-settings.php:250
+msgid "Characters appearing at end of excerpt"
+msgstr "Znaki na końcu zajaki"
+
+#: ../includes/admin-settings.php:261
+msgid "Check this box to enable 'Read more' link functionality"
+msgstr "Zaznacz, by włączyć link 'Czytaj więcej'"
+
+#: ../includes/admin-settings.php:292
+msgid "Check this box to enable thumbnail functionality"
+msgstr "Zaznacz, by włączyć miniaturki"
+
+#: ../includes/admin-settings.php:305
+msgid "Use the default thumbnail"
+msgstr "Użyj domyślnej miniaturki"
+
+#: ../includes/admin-settings.php:306
+msgid "Show no thumbnail"
+msgstr "Nie pokazuj miniaturki"
+
+#: ../includes/admin-settings.php:325
+msgid "Auto Detect"
+msgstr "Automatycznie"
+
+#: ../includes/admin-settings.php:326
+msgid "First image in excerpt"
+msgstr "Pierwszy obrazek w zajawce"
+
+#: ../includes/admin-settings.php:327
+msgid "Image in &lt;media:thumbnail&gt; tag"
+msgstr "Obrazek w &lt;media:thumbnail&gt; tag"
+
+#: ../includes/admin-settings.php:328
+msgid "Image in &lt;enclosure&gt; tag"
+msgstr "Obrazek w &lt;enclosure&gt; tag"
+
+#: ../includes/admin-settings.php:344
+msgid "Choose the image to use as the thumbnail."
+msgstr "Wybierz obrazek jako miniaturka."
+
+#: ../includes/admin-settings.php:345
+msgid ""
+"Use Auto Detect to use the method used in older versions of Excerpts &amp; "
+"Thumbnails."
+msgstr ""
+"Użyj Automatycznej funkcji w starszych przeglądarkach Excerpts &amp; "
+"Thumbnails."
+
+#: ../includes/admin-settings.php:362
+msgid "Check this box to link the thumbnail to the feed item's permalink"
+msgstr "Zaznacz ten box, aby powiązać miniaturę z linkiem"
+
+#: ../includes/admin-settings.php:384
+msgid "The thumbnail width in pixels"
+msgstr "Szerokość miniatur w pikselach"
+
+#: ../includes/admin-settings.php:395
+msgid "The thumbnail height in pixels"
+msgstr "Wysokość miniatur w pikselach"
+
+#: ../includes/admin-settings.php:413
+msgid "WPThumb library not found"
+msgstr "Nie znaleziono biblioteki WPThumb"
+
+#: ../includes/admin-settings.php:437
+msgid "Enter your license key"
+msgstr "Wprowadź klucz licencyjny"
+
+#: ../includes/admin-settings.php:453
+msgid "active"
+msgstr "﻿aktywne"
+
+#: ../includes/admin-settings.php:455
+msgid "Deactivate License"
+msgstr "Deaktywacja licencji"
+
+#: ../includes/admin-settings.php:473
+msgid "Check this box to add social buttons to every post created"
+msgstr "Zaznacz,  aby dodać przyciski social do każdego postu"
+
+#: ../includes/admin-settings.php:488
+msgid "This will be also appended to the tweet text"
+msgstr "To będzie również dołączone do tweeta"
+
+#: ../includes/admin-settings.php:595
+msgid "Excerpts"
+msgstr "Zajawki"
+
+#: ../includes/admin-settings.php:599
+msgid "Thumbnails"
+msgstr "Miniaturki"
+
+#: ../includes/feed-display.php:481
+msgid "No feed items found."
+msgstr "Nie znaleziono kanału."
+
+#: ../includes/libraries/WPThumb/wpthumb.crop-from-position.php:54
+msgid "Crop Position"
+msgstr "Pozycja cięcia"
+
+#: ../includes/libraries/WPThumb/wpthumb.php:760
+msgid "WPThumb has detected a problem."
+msgstr "WPThumb znalazł problem."
+
+#: ../includes/libraries/WPThumb/wpthumb.php:760
+#, php-format
+msgid "The directory <code>%s</code> is not writable."
+msgstr "Katalog <code>%s</code> nie ma praw zapisu."
+
+#: ../includes/libraries/WPThumb/wpthumb.watermark.php:192
+msgid "Watermark"
+msgstr "Znak wodny"
+
+#: ../includes/word-trimmer.php:190
+msgid "&hellip;"
+msgstr "&hellip;"
+
+#. translators: If your word count is based on single characters (East Asian characters),
+#. enter 'characters'. Otherwise, enter 'words'. Do not translate into your own language.
+#: ../includes/word-trimmer.php:195
+msgid "words"
+msgstr "słowa"
+
+#: ../wp-rss-excerpts-thumbnails.php:111
+msgid "This plugin requires WordPress version 3.5 or higher."
+msgstr ""
+
+#: ../wp-rss-excerpts-thumbnails.php:206
+#, php-format
+msgid ""
+"Please <a href=\"%s\">install &amp; activate WP RSS Aggregator</a> for the "
+"Excerpts and Thumbnails addon to work."
+msgstr ""
+"Proszę <a href=\"%s\">zainstaluj &amp; aktywuj WP RSS Aggregator</a> aby "
+"korzystać z dodatku Kategorie."
+
+#: ../wp-rss-excerpts-thumbnails.php:220
+msgid ""
+"Please update WP RSS Aggregator to the latest version for the Excerpts and "
+"Thumbnails addon to work properly."
+msgstr ""
+"Proszę zaktualizuj WP RSS Aggregator do najnowszej wersji, aby dodatek "
+"Kategorie działał poprawnie."
+
+#: ../wp-rss-excerpts-thumbnails.php:264
+#, php-format
+msgid ""
+"Remember to <a href=\"%s\">enter your plugin license code</a> for the WP RSS "
+"Aggregator <b>Excerpts &amp; Thumbnails</b> add-on, to benefit from updates "
+"and support."
+msgstr ""
+"Pamiętaj, aby <a href=\"%s\">wpisać kod licencji plugin</a> dla dodatku WP "
+"RSS agregator <b>fragmenty &amp; miniatury</b> , aby korzystać z "
+"aktualizacji i wsparcia."
+
+#: ../wp-rss-excerpts-thumbnails.php:271
+msgid "Dismiss this notification"
+msgstr "﻿Odrzucić to powiadomienie"
+
+#: ../wp-rss-excerpts-thumbnails.php:337
+msgid "Default thumbnail"
+msgstr "Domyślny obrazek miniaturki"
+
+#: ../wp-rss-excerpts-thumbnails.php:348 ../wp-rss-excerpts-thumbnails.php:349
+msgid "Remove featured image"
+msgstr "Usuń główny obrazek"
+
+#: ../wp-rss-excerpts-thumbnails.php:349
+msgid "Remove default thumbnail"
+msgstr "Usuń domyślną miniaturę"
+
+#: ../wp-rss-excerpts-thumbnails.php:351 ../wp-rss-excerpts-thumbnails.php:352
+msgid "Set featured image"
+msgstr "Ustaw główny obrazek"
+
+#: ../wp-rss-excerpts-thumbnails.php:352 ../wp-rss-excerpts-thumbnails.php:372
+msgid "Set default thumbnail"
+msgstr "Użyj domyślnej miniaturki"
+
+#: ../wp-rss-excerpts-thumbnails.php:371
+msgid "Set Default Thumbnail"
+msgstr "Użyj domyślnej miniaturki"
+
+#~ msgid "This plugin requires WordPress version 3.3 or higher."
+#~ msgstr "Ta wtyczka wymaga WordPress w wersji 3.3 lub wyższej."
