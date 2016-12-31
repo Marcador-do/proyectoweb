@@ -215,7 +215,7 @@
 					<?php
 					while( $query_posts->have_posts()): $query_posts->the_post(); 
 					$posted_id[] = get_the_id();
-					$categories = wp_get_post_categories(get_the_id());
+					$categories =  get_the_category(get_the_id());
 
 					?>
 					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 marcador-post-list">
@@ -331,11 +331,12 @@ else if($type_news == "4") { ?>
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-10">
 					<div class="marcador-post-list-content">
 						<?php 
-						$categories = wp_get_post_categories(get_the_id());
+						$categories = get_the_category(get_the_id());
 						$category = $categories[0]->name; 
 	                	$category_id = $categories[0]->term_id; // var_dump($categories[0]); 
 	                	$cat_count = count( $categories ) - 1;
 	                	$c = 0;
+
 	                	?>
 	                	<?php if( $cat_count > 1 ): ?>
 	                	<div class="marcador-post-list-category">
@@ -344,7 +345,7 @@ else if($type_news == "4") { ?>
 	                		<a href="<?php echo esc_url( get_category_link( $cat_value->term_id ) ); ?>">
 	                			<?php echo $cat_value->name; ?>
 	                		</a>
-	                		<?php if( ++$c !== $cat_count ): ?>,<?php 
+	                		<?php if( ++$c !== $cat_count ): ?><?php 
 	                		endif; ?>
 	                	<?php endif; ?>
 	                <?php endforeach; ?>
