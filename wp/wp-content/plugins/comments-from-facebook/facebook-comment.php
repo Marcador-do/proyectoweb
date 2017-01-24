@@ -3,7 +3,7 @@
  * Plugin Name: Wpdevart Facebook comments
  * Plugin URI: http://wpdevart.com/wordpress-facebook-comments-plugin/
  * Description: Facebook comments plugin will help you to display Facebook Comments box on your website. You can use Facebook Comments on your pages/posts.
- * Version: 1.5.8
+ * Version: 1.6.1
  * Author: wpdevart
  * License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */

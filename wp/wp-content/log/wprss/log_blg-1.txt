@@ -1,0 +1,41 @@
+[30-12-2016 16:50:59] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://www.liderendeportes.com/cmspages/rss/lider/loultimo.aspx". cURL error 28: Operation timed out after 30000 milliseconds with 0 bytes received
+
+
+[30-12-2016 17:20:33] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "https://es-us.deportes.yahoo.com/?format=rss". cURL error 6: Could not resolve host: es-us.deportes.yahoo.com
+
+[30-12-2016 17:20:35] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://www.liderendeportes.com/cmspages/rss/lider/loultimo.aspx". cURL error 6: Could not resolve host: www.liderendeportes.com
+
+
+[30-12-2016 18:20:03] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "https://es-us.deportes.yahoo.com/?format=rss". cURL error 6: Could not resolve host: es-us.deportes.yahoo.com
+
+[30-12-2016 18:20:03] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://www.liderendeportes.com/cmspages/rss/lider/loultimo.aspx". cURL error 6: Could not resolve host: www.liderendeportes.com
+
+
+[31-12-2016 12:00:23] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "https://es-us.deportes.yahoo.com/?format=rss". cURL error 6: Could not resolve host: es-us.deportes.yahoo.com
+
+[31-12-2016 12:00:24] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "http://www.liderendeportes.com/cmspages/rss/lider/loultimo.aspx". cURL error 6: Could not resolve host: www.liderendeportes.com
+
+
+[31-12-2016 15:16:56] [Error] WPRSS > wprss_get_feed_items:
+Failed to fetch feed "https://es-us.deportes.yahoo.com/?format=rss". The resource could not be retrieved because of a server error with code 502
+Server returned 3049 characters, of which 150 are below:
+<!DOCTYPE html>
+<html lang="en-us"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Ya
+
+
+[01-01-2017 09:49:05] [Error] WPRSS > wprss_detect_exec_timeout:
+The PHP script timed out while importing feed #61921
+
+[01-01-2017 09:49:05] [Error] WPRSS > wprss_detect_exec_timeout:
+The PHP script timed out while importing feed #61921
+

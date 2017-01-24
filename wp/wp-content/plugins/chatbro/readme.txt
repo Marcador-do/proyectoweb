@@ -3,7 +3,7 @@ Contributors: ChatBro
 Tags: Chat, Chat Tool, Chat Widget, Free Live Chat, Group Chat, Live Chat, Online Live Chat, Plugin Chat, Web Chat, live chat widget, online support, wordpress live chat, chat software, chat services, live help, live chat help, chat widget, live support plugin, live chat support plugin
 Requires at least: 3.5
 Tested up to: 4.7
-Stable tag: 1.1.10
+Stable tag: 1.1.11
 License: GPLv2
 
 Chat for your community with social networks integration. Syncronizes chat conversation with Telegram messenger. Allows your visitors to chat online in live group chat with you and each other. Skyrocket user engagement and overall time spent on your website.
@@ -65,6 +65,9 @@ You can choose color theme, size, initial state, etc.
 5. How to enable indexing of the chat
 
 == ChangeLog ==
+
+= 1.1.11 =
+* Fixed issue when chat wasn't being created after plugin installation until user has gone to the chat constructor.
 
 = 1.1.10 =
 * Fixed issue when the plugin wasn't been uninstalled correctly.

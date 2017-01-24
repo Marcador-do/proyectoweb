@@ -27,10 +27,10 @@ class wpdevart_comment_setting{
 			"title_text"						=> 'Comments',
 			"title_text_color"					=> '#000000',
 			"title_text_font_size"				=> '20',
-			"title_text_font_famely"			=> 'Times New Roman,Times,Georgia,serif',
+			"title_text_font_famely"			=> 'Times New Roman,Times,Georgia,Serif',
 			"title_text_position"				=> 'left',
 			"width"								=>  '100%',
-			"count_of_comments"					=>  '10',
+			"count_of_comments"					=>  '8',
 			"locale"							=>  'en_US',	
 				
 		);

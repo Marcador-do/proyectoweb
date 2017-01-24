@@ -1291,7 +1291,7 @@ function siteorigin_panels_the_widget( $widget_info, $instance, $grid, $cell, $p
 	// If there is a style wrapper, add it.
 	if( !empty($style_wrapper) ) {
 		$args['before_widget'] = $args['before_widget'] . $style_wrapper;
-		$args['after_widget'] = '</div>' . $args['after_widget'];
+		$args['after_widget'] = '</div>'. $args['after_widget'];
 	}
 
 	if ( !empty($the_widget) && is_a($the_widget, 'WP_Widget')  ) {
