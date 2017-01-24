@@ -23,11 +23,11 @@ class wpdevart_comment_install_database{
 				"wpdevart_comment_title_text"						=> 'Facebook Comments',
 				"wpdevart_comment_title_text_color"					=> '#000000',
 				"wpdevart_comment_title_text_font_size"				=> '20',
-				"wpdevart_comment_title_text_font_famely"			=> 'Times New Roman,Times,Georgia,serif',
+				"wpdevart_comment_title_text_font_famely"			=> 'Times New Roman,Times,Georgia,Serif',
 				"wpdevart_comment_title_text_position"				=> 'left',
 				"wpdevart_comments_box_show_in"						=>  '{"home":true,"post":true,"page":true}',	
 				"wpdevart_comments_box_width"						=>  '100%',
-				"wpdevart_comments_box_count_of_comments"			=>  '10',	
+				"wpdevart_comments_box_count_of_comments"			=>  '8',	
 				"wpdevart_comments_box_locale"						=>  'en_US',		
 			)			
 		);

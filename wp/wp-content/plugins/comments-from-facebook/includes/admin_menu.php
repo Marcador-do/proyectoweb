@@ -31,6 +31,9 @@ class wpdevart_comment_admin_menu{
 			add_meta_box('myplugin_sectionid',	'Disable Wpdevart facebook comment',array($this,'generete_html_for_wpdevart_comment_box'),	$post_type	);
 		}
 	}
+	
+/*############  HTML generating function  ################*/
+	
 	public function generete_html_for_wpdevart_comment_box($post){
 		// Add field that we can check later.
 		wp_nonce_field( 'wpdevar_save_post', 'wpdevart_facebook_meta_box_nonce' );
@@ -103,7 +106,7 @@ class wpdevart_comment_admin_menu{
 		return NULL;
 		
 	}
-	
+	/*###################### Database function ##################*/	
 	public function save_in_databese(){
 		$kk=1;	
 		if(isset($_POST['wpdevart_comment_options_nonce']) && wp_verify_nonce( $_POST['wpdevart_comment_options_nonce'],'wpdevart_comment_options_nonce')){

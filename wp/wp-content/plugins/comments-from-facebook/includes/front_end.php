@@ -75,6 +75,7 @@ class wpdevart_comment_front_end{
 			echo '<meta property="fb:app_id" content="'.$this->params['wpdevart_comment_facebook_app_id'].'"/>';
 		
 	}
+	/*###################### Shortcode function ##################*/	
 	public function wpdevart_comment_shortcode($atts){
 		$atts = shortcode_atts( array(
 			"facebook_app_id"					=> $this->params['wpdevart_comment_facebook_app_id'],
@@ -91,6 +92,9 @@ class wpdevart_comment_front_end{
 		), $atts, 'wpdevart_facebook_comment' );
 		return  wpdevart_comment_setting::generete_iframe_by_array($atts);
 	}
+
+/*############  Js function  ################*/	
+	
 	public function generete_facbook_js_sdk(){
 		?>
         <div id="fb-root"></div>
