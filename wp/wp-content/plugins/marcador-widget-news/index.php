@@ -366,9 +366,10 @@ else if($type_news == "4") { ?>
 	<?php endif; ?>
 	<div class="marcador-post-list-meta">
                 		<div class="marcador-post-list-author">
-                			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
-                				<?php echo get_the_author_meta( 'user_nicename' ); ?>
-                			</a>
+                			<!--<a href="<?php /* echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
+                				<?php echo get_the_author_meta( 'user_nicename' ); */ ?>
+                			</a>-->
+                			 <?php the_author_posts_link(); ?>
                 		</div>
                 		<div class="marcador-post-list-date">
                   			<a href="<?php echo esc_url( get_day_link( $year = get_the_date('Y') , $month = get_the_date('m'), $day = get_the_date('d') ) ) ?>">
@@ -451,9 +452,10 @@ else if($type_news == "4") { ?>
 <div class="panel-footer">
 	<div class="marcador-post-list-meta">
                 		<div class="marcador-post-list-author">
-                			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
-                				<?php echo get_the_author_meta( 'user_nicename' ); ?>
-                			</a>
+                			<!--<a href="<?php /* echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
+                				<?php echo get_the_author_meta( 'user_nicename' ); */ ?>
+                			</a> -->
+                			 <?php the_author_posts_link(); ?>
                 		</div>
                 		<div class="marcador-post-list-date">
                   			<a href="<?php echo esc_url( get_day_link( $year = get_the_date('Y') , $month = get_the_date('m'), $day = get_the_date('d') ) ) ?>">
