@@ -1,0 +1,1025 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: WP Cerber\n"
+"Language: nb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../settings.php:57
+msgid "Limit login attempts"
+msgstr "Begrens innloggingsforsøk"
+
+#: ../settings.php:58
+msgid "Attempts"
+msgstr "Forsøk"
+
+#: ../settings.php:59
+msgid "Lockout duration"
+msgstr "Varighet for utestengelse"
+
+#: ../settings.php:59 ../settings.php:76 ../common.php:229
+msgid "minutes"
+msgstr "minutter"
+
+#: ../settings.php:60
+msgid "Aggressive lockout"
+msgstr "Aggressiv utestengelse"
+
+#: ../settings.php:62
+msgid "Site connection"
+msgstr "Sidetilkobling"
+
+#: ../settings.php:64
+msgid "Proactive security rules"
+msgstr "Proaktive sikkerhetsregler"
+
+#: ../settings.php:65
+msgid "Block subnet"
+msgstr "Blokkér subnet"
+
+#: ../settings.php:68
+msgid "Request wp-login.php"
+msgstr "Kobling til wp-login.php"
+
+#: ../settings.php:68
+msgid "Immediately block IP after any request to wp-login.php"
+msgstr "Blokkér umiddelbart IP-en etter ethvert forsøk på å koble til wp-login.php"
+
+#: ../settings.php:67
+msgid "Redirect dashboard requests"
+msgstr "Omdiriger kontrollpanel-koblinger"
+
+#: ../settings.php:70
+msgid "Custom login page"
+msgstr "Egendefinert innloggingsside"
+
+#: ../settings.php:71
+msgid "Custom login URL"
+msgstr "Egendefinert URL for innlogging"
+
+#: ../settings.php:71
+msgid "must not overlap with the existing pages or posts slug"
+msgstr "må ikke være lik eksisterende sider eller slug"
+
+#: ../settings.php:72
+msgid "Disable wp-login.php"
+msgstr "Deaktiver wp-login.php"
+
+#: ../settings.php:72
+msgid "Block direct access to wp-login.php and return HTTP 404 Not Found Error"
+msgstr "Blokkér direkte tilgang til wp-login.php og returnér HTTP 404 Ikke Funnet-feil."
+
+#: ../dashboard.php:840 ../settings.php:74
+msgid "Citadel mode"
+msgstr "Vakttårnsmodus"
+
+#: ../settings.php:75
+msgid "Threshold"
+msgstr "Terskel"
+
+#: ../settings.php:76
+msgid "Duration"
+msgstr "Varighet"
+
+#: ../settings.php:61 ../settings.php:78 ../settings.php:80
+msgid "Notifications"
+msgstr "Varsling"
+
+#: ../settings.php:78
+msgid "Send notification to admin email"
+msgstr "Send varsel til admins e-postadresse"
+
+#: ../dashboard.php:658 ../dashboard.php:667 ../dashboard.php:775 ../dashboard.
+#: php:846 ../dashboard.php:1174 ../wp-cerber.php:2188 ../settings.php:196
+msgid "Access Lists"
+msgstr "Tilgangsliste"
+
+#: ../dashboard.php:386 ../dashboard.php:844 ../dashboard.php:952 ../settings.php:
+#: 85 ../settings.php:188
+msgid "Activity"
+msgstr "Aktivitet"
+
+#: ../dashboard.php:845 ../settings.php:191
+msgid "Lockouts"
+msgstr "Utestengelser"
+
+#: ../settings.php:278
+msgid "%s allowed retries in %s minutes"
+msgstr "%s tillatte forsøk på %s minutter"
+
+#: ../settings.php:295
+msgid "Enable after %s failed login attempts in last %s minutes"
+msgstr "Aktivér etter %s mislykkede innloggingsforsøk på %s minutter"
+
+#: ../dashboard.php:75 ../dashboard.php:386
+msgid "IP"
+msgstr "IP-adresse"
+
+#: ../dashboard.php:386
+msgid "Date"
+msgstr "Dato"
+
+#: ../dashboard.php:386
+msgid "Local User"
+msgstr "Lokal bruker"
+
+#: ../dashboard.php:386
+msgid "Username used"
+msgstr "Brukernavn brukt"
+
+#: ../dashboard.php:81
+msgid "Showing last %d records from %d"
+msgstr "Viser siste %d oppføringer fra %d"
+
+#: ../common.php:131
+msgid "Logged in"
+msgstr "Logget inn"
+
+#: ../common.php:132
+msgid "Logged out"
+msgstr "Logget ut"
+
+#: ../common.php:133
+msgid "Login failed"
+msgstr "Innlogging feilet"
+
+#: ../common.php:136
+msgid "IP blocked"
+msgstr "IP blokkert"
+
+#: ../common.php:137
+msgid "Subnet blocked"
+msgstr "Subnet blokkert"
+
+#: ../common.php:139
+msgid "Citadel activated!"
+msgstr "Vakttårn aktivert!"
+
+#: ../dashboard.php:375 ../dashboard.php:439 ../common.php:141
+msgid "Locked out"
+msgstr "Utestengt"
+
+#: ../common.php:142
+msgid "IP blacklisted"
+msgstr "IP svartelistet"
+
+#: ../common.php:145
+msgid "Password changed"
+msgstr "Passord endret"
+
+#: ../dashboard.php:72 ../dashboard.php:122
+msgid "Remove"
+msgstr "Fjern"
+
+#: ../dashboard.php:254
+msgid "Lockout for %s was removed"
+msgstr "Utestengelse for %s ble fjernet"
+
+#: ../dashboard.php:100 ../dashboard.php:370 ../dashboard.php:434 ../dashboard.
+#: php:838 ../wp-cerber.php:2182 ../settings.php:153
+msgid "White IP Access List"
+msgstr "Hvit IP-tilgangsliste"
+
+#: ../dashboard.php:102 ../dashboard.php:371 ../dashboard.php:436 ../dashboard.
+#: php:839
+msgid "Black IP Access List"
+msgstr "Svart IP-tilgangsliste"
+
+#: ../dashboard.php:125
+msgid "List is empty"
+msgstr "Listen er tom"
+
+#: ../dashboard.php:147
+msgid "Address %s was added to White IP Access List"
+msgstr "Adressen %s ble lagt til den hvite IP-tilgangslisten"
+
+#: ../dashboard.php:160
+msgid "Address %s was added to Black IP Access List"
+msgstr "Adressen %s ble lagt til den svarte IP-tilgangslisten"
+
+#: ../wp-cerber.php:1894
+msgid "Citadel mode is activated after %d failed login attempts in %d minutes."
+msgstr "Vakttårnsmodus ble aktivert etter %d mislykkede innloggingsforsøk på %d minutter"
+
+#: ../dashboard.php:1067
+msgid "View Activity"
+msgstr "Se aktivitet"
+
+#: ../dashboard.php:657 ../dashboard.php:666 ../dashboard.php:847 ../dashboard.
+#: php:1173
+msgid "Settings"
+msgstr "Innstillinger"
+
+#: ../dashboard.php:606
+msgid "Last login"
+msgstr "Siste innlogging"
+
+#: ../dashboard.php:633 ../dashboard.php:821
+msgid "Never"
+msgstr "Aldri"
+
+#: ../dashboard.php:991 ../dashboard.php:1784
+msgid "Are you sure?"
+msgstr "Er du sikker?"
+
+#: ../dashboard.php:509 ../dashboard.php:516
+msgid "WP Cerber Settings"
+msgstr "WP Cerber-innstillinger"
+
+#: ../settings.php:62
+msgid "My site is behind a reverse proxy"
+msgstr "Min side er bak en reverse proxy"
+
+#: ../settings.php:66
+msgid "Non-existent users"
+msgstr "Ikke-eksisterende brukere"
+
+#: ../settings.php:66
+msgid "Immediately block IP when attempting to login with a non-existent username"
+msgstr "Blokkér umiddelbart IP når noen prøver å logge inn med et ikke-eksisterende brukernavn"
+
+#: ../settings.php:67
+msgid "Disable automatic redirecting to the login page when /wp-admin/ is requested by an unauthorized request"
+msgstr "Deaktivér automatisk omdirigering til innloggingssiden når /wp-admin/ blir forsøkt tilkoblet fra en uatorisert forespørsel"
+
+#: ../settings.php:137
+msgid "Make your protection smarter!"
+msgstr "Gjør din beskyttelse smartere!"
+
+#: ../settings.php:141
+msgid "Please enable Permalinks to use this feature. Set Permalink Settings to something other than Default."
+msgstr "Vennligst "
+
+#: ../settings.php:144
+msgid "Be careful when enabling this options. If you forget the custom login URL you will not be able to login."
+msgstr "Vær forsiktig når du velger dette alternativet. Glemmer du din nye URL for innlogging, vil du ikke kunne logge deg inn."
+
+#: ../wp-cerber.php:2187 ../settings.php:193
+msgid "Main Settings"
+msgstr "Hovedinnstillinger"
+
+#: ../settings.php:207
+msgid "Help"
+msgstr "Hjelp"
+
+#: ../settings.php:283
+msgid "Increase lockout duration to %s hours after %s lockouts in the last %s hours"
+msgstr "Øk varigheten av utestengelser til %s timer etter %s utestengelser i løpet av de siste %s timer"
+
+#: ../wp-cerber.php:184
+msgid "You are not allowed to log in. Ask your administrator for assistance."
+msgstr "Du har ikke tillatelse til å logge inn. Spør din administrator om du trenger hjelp."
+
+#: ../wp-cerber.php:190
+msgid "You have reached the login attempts limit. Please try again in %d minutes."
+msgstr "Du har nådd grensen for antall tillatte innloggingsforsøk. Vennligst prøv igjen om %d minutter."
+
+#: ../wp-cerber.php:208
+msgid "You have only one attempt remaining."
+msgid_plural "You have %d attempts remaining."
+msgstr[0] "Du har kun ett forsøk igjen."
+msgstr[1] "Du har %d forsøk igjen."
+
+#: ../dashboard.php:410
+msgid "Show only"
+msgstr "Vis bare"
+
+#: ../dashboard.php:396
+msgid "No activity has been logged."
+msgstr "Ingen aktivitet har blitt registrert."
+
+#: ../dashboard.php:75
+msgid "Expires"
+msgstr "Utgår"
+
+#: ../dashboard.php:87
+msgid "No lockouts at the moment. The sky is clear."
+msgstr "Ingen utestengelser akkurat nå. Kysten er klar."
+
+#: ../dashboard.php:100
+msgid "These IPs will never be locked out"
+msgstr "Disse IP-er vil aldri bli utestengt"
+
+#: ../dashboard.php:104
+msgid "Your IP"
+msgstr "Din IP"
+
+#: ../dashboard.php:156
+msgid "You can't add your IP address"
+msgstr "Du kan ikke legge til din IP-adresse"
+
+#: ../wp-cerber.php:1895
+msgid "Last failed attempt was at %s from IP %s with user login: %s."
+msgstr "Siste mislykkede forsøk var %s fra IP %s med brukernavn %s."
+
+#: ../wp-cerber.php:1957
+msgid "Change notification settings"
+msgstr "Endre varslingsinnstillinger"
+
+#: ../wp-cerber.php:2165
+msgid "Can't activate WP Cerber due to a database error."
+msgstr "Kunne ikke aktivere WP Cerber på grunn av en databasefeil."
+
+#: ../settings.php:290
+msgid "Notify admin if the number of active lockouts above"
+msgstr "Varsle administratoren om antallet aktive utestengelser overskrider"
+
+#: ../settings.php:86 ../common.php:227
+msgid "days"
+msgstr "dager"
+
+#: ../dashboard.php:793
+msgid "Cerber Quick View"
+msgstr "Cerber hurtigvisning"
+
+#: ../dashboard.php:83
+msgid "Hint"
+msgstr "Hint"
+
+#: ../dashboard.php:83
+msgid "To view activity, click on the IP"
+msgstr "For å se aktivitet klikk på IP-en"
+
+#: ../dashboard.php:122 ../dashboard.php:466
+msgid "Check for activity"
+msgstr "Sjekk etter aktivitet"
+
+#: ../settings.php:65
+msgid "Always block entire subnet Class C of intruders IP"
+msgstr "Alltid blokkér hele subnet Class C av inntrengerens IP"
+
+#: ../settings.php:78 ../settings.php:292
+msgid "Click to send test"
+msgstr "Klikk for å sende test"
+
+#: ../settings.php:345
+msgid "Attention! You have changed the login URL! The new login URL is"
+msgstr "OBS! Du har endret innloggings-adressen. Din nye URL for innlogging er"
+
+#: ../dashboard.php:605
+msgid "Comments"
+msgstr "Kommentarer"
+
+#: ../dashboard.php:608
+msgid "Date of registration"
+msgstr "Registreringsdato"
+
+#: ../dashboard.php:246
+msgid "Message has been sent to "
+msgstr "Melding har blitt sendt til "
+
+#: ../dashboard.php:1124
+msgid "Update to version %s of WP Cerber"
+msgstr "Oppdatér til versjon %s av WP Cerber"
+
+#: ../wp-cerber.php:1896
+msgid "View activity in dashboard"
+msgstr "Se aktivitet i kontrollpanelet"
+
+#: ../wp-cerber.php:1924
+msgid "Number of active lockouts"
+msgstr "Antall aktive utestengelser"
+
+#: ../wp-cerber.php:1929
+msgid "View lockouts in dashboard"
+msgstr "Se utestengelser i kontrollpanelet"
+
+#: ../wp-cerber.php:1977
+msgid "This message was sent by"
+msgstr "Denne meldingen ble sendt av"
+
+#: ../settings.php:205
+msgid "Tools"
+msgstr "Verktøy"
+
+#: ../dashboard.php:654
+msgid "Export settings to the file"
+msgstr "Eksportér innstillinger til filen"
+
+#: ../dashboard.php:655
+msgid "When you click the button below you will get a configuration file, which you can upload on another site."
+msgstr "Når du klikker knappen under, vil du få en konfigurasjonsfil som du kan laste opp på en annen side."
+
+#: ../dashboard.php:656
+msgid "What do you want to export?"
+msgstr "Hva ønsker du å eksportere?"
+
+#: ../dashboard.php:659
+msgid "Download file"
+msgstr "Last ned fil"
+
+#: ../dashboard.php:661
+msgid "Import settings from the file"
+msgstr "Importér innstillinger fra filen"
+
+#: ../dashboard.php:662
+msgid "When you click the button below, file will be uploaded and all existing settings will be overridden."
+msgstr "Når du klikker på knappen under, vil filen lastes opp og alle eksisterende innstillinger vil bli overskrevet."
+
+#: ../dashboard.php:663
+msgid "Select file to import."
+msgstr "Velg fil å importere."
+
+#: ../dashboard.php:663
+msgid "Maximum upload file size: %s."
+msgstr "Maksimum tillatte filstørrelse for opplasting: %s."
+
+#: ../dashboard.php:666
+msgid "What do you want to import?"
+msgstr "Hva ønsker du å importere?"
+
+#: ../dashboard.php:668
+msgid "Upload file"
+msgstr "Last opp fil"
+
+#: ../dashboard.php:749
+msgid "No file was uploaded or file is corrupted"
+msgstr "Ingen fil ble lastet opp, eller er filen ødelagt"
+
+#: ../dashboard.php:775
+msgid "Error while updating"
+msgstr "Feil under oppdatering"
+
+#: ../dashboard.php:778
+msgid "Settings has imported successfully from"
+msgstr "Innstillinger ble importert fra"
+
+#: ../dashboard.php:782
+msgid "Error while parsing file"
+msgstr "Feil under parsing av filen"
+
+#: ../dashboard.php:75 ../dashboard.php:386
+msgid "Hostname"
+msgstr "Vertsnavn"
+
+#: ../dashboard.php:227
+msgid "unknown"
+msgstr "ukjent"
+
+#: ../settings.php:86
+msgid "Keep records for"
+msgstr "Behold logger"
+
+#: ../dashboard.php:825
+msgid "active"
+msgstr "aktive"
+
+#: ../dashboard.php:825
+msgid "deactivate"
+msgstr "deaktiver"
+
+#: ../dashboard.php:827
+msgid "not active"
+msgstr "ikke aktive"
+
+#: ../dashboard.php:828
+msgid "disabled"
+msgstr "deaktivert"
+
+#: ../dashboard.php:833
+msgid "failed attempts"
+msgstr "mislykkede forsøk"
+
+#: ../dashboard.php:833 ../dashboard.php:834
+msgid "in 24 hours"
+msgstr "på 24 timer"
+
+#: ../dashboard.php:833 ../dashboard.php:834
+msgid "view all"
+msgstr "se alle"
+
+#: ../dashboard.php:834
+msgid "lockouts"
+msgstr "utestengelser"
+
+#: ../dashboard.php:836
+msgid "Lockouts at the moment"
+msgstr "Utestengelser akkurat nå"
+
+#: ../dashboard.php:837
+msgid "Last lockout"
+msgstr "Siste utestengelse"
+
+#: ../dashboard.php:838 ../dashboard.php:839 ../dashboard.php:1155
+msgid "entry"
+msgid_plural "entries"
+msgstr[0] "oppføring"
+msgstr[1] "oppføringer"
+
+#: ../dashboard.php:986
+msgid "Confused about some settings?"
+msgstr "Usikker på noen innstillinger?"
+
+#: ../dashboard.php:987
+msgid "You can easily load default recommended settings using button below"
+msgstr "Du kan enkelt laste inn anbefalte standardinnstillinger via knappen under"
+
+#: ../dashboard.php:989
+msgid "Load default settings"
+msgstr "Last inn standardinnstillinger"
+
+#: ../dashboard.php:997
+msgid "doesn't affect Custom login URL and Access Lists"
+msgstr "påvirker ikke egendefinert innloggings-URL og tilgangslister"
+
+#: ../dashboard.php:1016
+msgid "Donate"
+msgstr "Donér"
+
+#: ../dashboard.php:1118
+msgid "New version is available"
+msgstr "Ny versjon er tilgjengelig"
+
+#. Name of the plugin
+#: ../dashboard.php:509 ../dashboard.php:511 ../dashboard.php:516 ../dashboard.
+#: php:540
+msgid "WP Cerber"
+msgstr "WP Cerber"
+
+#. URI of the plugin
+#: 
+msgid "http://wpcerber.com"
+msgstr "http://wpcerber.com"
+
+#: ../wp-cerber.php:1873
+msgid "WP Cerber notify"
+msgstr "WP Cerber-varsling"
+
+#: ../wp-cerber.php:1892
+msgid "Citadel mode is activated"
+msgstr "Vakttårns-modus er aktivert"
+
+#: ../wp-cerber.php:1962
+msgid "New Custom login URL"
+msgstr "Ny egendefinert innloggings-URL"
+
+#: ../wp-cerber.php:2156
+msgid "The WP Cerber requires PHP %s or higher. You are running"
+msgstr "WP Cerber krever PHP versjon %s eller høyere. Du kjører"
+
+#: ../wp-cerber.php:2160
+msgid "The WP Cerber requires WordPress %s or higher. You are running"
+msgstr "WP Cerber krever WordPress versjon %s eller høyere. Du kjører"
+
+#: ../settings.php:92
+msgid "Use file"
+msgstr "Bruk fil"
+
+#: ../settings.php:92
+msgid "Write failed login attempts to the file"
+msgstr "Skriv mislykkede innloggingsforsøk til filen"
+
+#: ../dashboard.php:607
+msgid "Failed attempts in last 24 hours"
+msgstr "Mislykkede forsøk de siste 24 timer"
+
+#: ../dashboard.php:1066
+msgid "Deactivate"
+msgstr "Deaktivér"
+
+#: ../dashboard.php:75 ../wp-cerber.php:1927
+msgid "Reason"
+msgstr "Grunn"
+
+#: ../dashboard.php:129
+msgid "Add IP to the list"
+msgstr "Legg IP til listen"
+
+#: ../dashboard.php:484
+msgid "Add IP to the Black List"
+msgstr "Legg IP til svartelisten"
+
+#: ../common.php:163
+msgid "Attempt to access"
+msgstr "Forsøk på å få tilgang til"
+
+#: ../common.php:162
+msgid "Limit on login attempts is reached"
+msgstr "Grensen for innloggingsforsøk er nådd"
+
+#: ../common.php:152 ../common.php:164
+msgid "Attempt to log in with non-existent username"
+msgstr "Forsøk på å logge inn med ikke-eksisterende brukernavn"
+
+#: ../wp-cerber.php:1926
+msgid "Last lockout was added: %s for IP %s"
+msgstr "Siste utestengelse ble lagt til: %s for IP %s"
+
+#: ../wp-cerber.php:2184
+msgid "It's important to check security settings."
+msgstr "Det viktig å sjekke sikkerhetsinnstillingene."
+
+#: ../wp-cerber.php:2189 ../settings.php:198
+msgid "Hardening"
+msgstr "Forsterking"
+
+#: ../dashboard.php:462
+msgid "Abuse email:"
+msgstr "Repportering av misbruk:"
+
+#: ../settings.php:82
+msgid "Email Address"
+msgstr "E-postadresse"
+
+#: ../settings.php:82
+msgid "if empty, the admin email %s will be used"
+msgstr "Hvis tom, vil e-postadressen %s bli brukt"
+
+#: ../settings.php:89
+msgid "Drill down IP"
+msgstr "Inspiser IP"
+
+#: ../settings.php:89
+msgid "Retrieve extra WHOIS information for IP"
+msgstr "Hent ekstra WHOIS-informasjon for IP"
+
+#: ../settings.php:99
+msgid "Hardening WordPress"
+msgstr "Forsterke WordPress"
+
+#: ../settings.php:100
+msgid "Stop user enumeration"
+msgstr "Stopp opplisting av brukere"
+
+#: ../settings.php:100
+msgid "Block access to the pages like /?author=n"
+msgstr "Blokkér tilgang til sider som /?author=n"
+
+#: ../settings.php:101
+msgid "Disable XML-RPC"
+msgstr "Deaktivér XML-RPC"
+
+#: ../settings.php:101
+msgid "Block access to the XML-RPC server (including Pingbacks and Trackbacks)"
+msgstr "Blokkér tilgang til XML-RPC-serveren (inkluderer Pingbacks og Trackbacks)"
+
+#: ../settings.php:102
+msgid "Disable feeds"
+msgstr "Deaktiver feeds"
+
+#: ../settings.php:102
+msgid "Block access to the RSS, Atom and RDF feeds"
+msgstr "Blokkér tilgang til RSS- Atom- og RDF-feeds"
+
+#: ../settings.php:103
+msgid "Disable REST API"
+msgstr "Deaktivér REST API"
+
+#: ../settings.php:103
+msgid "Block access to the WordPress REST API"
+msgstr "Blokkér tilgang til WordPress' REST API"
+
+#: ../settings.php:153
+msgid "These settings do not affect hosts from the "
+msgstr "Disse innstillingene påvirker ikke verter fra "
+
+#: ../settings.php:368
+msgid "<strong>ERROR</strong>: please enter a valid email address."
+msgstr "<strong>FEIL</strong>: vennligst skriv inn en gyldig e-postadresse"
+
+#: ../settings.php:618
+msgid "Number of items per page:"
+msgstr "Antall innlegg pr. side:"
+
+#: ../wp-cerber.php:1956 ../wp-cerber.php:2181
+msgid "WP Cerber is now active and has started protecting your site"
+msgstr "WP Cerber er nå aktiv og har begynt å beskytte siden din"
+
+#: ../dashboard.php:75
+msgid "Action"
+msgstr "Handling"
+
+#: ../dashboard.php:102
+msgid "Nobody can log in or register from these IPs"
+msgstr "Ingen kan logge inn eller registrere seg fra disse IP-ene"
+
+#: ../dashboard.php:144 ../dashboard.php:152
+msgid "Incorrect IP address or IP range"
+msgstr "Feil IP-adresse eller IP-rekkevidde"
+
+#: ../dashboard.php:248
+msgid "Unable to send notification email"
+msgstr "Kunne ikke sende e-postvarsling"
+
+#: ../dashboard.php:261 ../dashboard.php:1082
+msgid "Settings saved"
+msgstr "Innstillingene er lagret"
+
+#: ../dashboard.php:466
+msgid "Network:"
+msgstr "Nettverk:"
+
+#: ../dashboard.php:480
+msgid "Add network to the Black List"
+msgstr "Legg nettverk til svartelisten"
+
+#: ../dashboard.php:468
+msgid "Cerber Security"
+msgstr "Cerber-sikkerhet"
+
+#: ../dashboard.php:1065
+msgid "Attention! Citadel mode is now active. Nobody is able to log in."
+msgstr "Advarsel! Vakttårns-modus er nå aktiv. Ingen vil kunne logge inn."
+
+#: ../whois.php:211
+msgid "Unknown"
+msgstr "Ukjent"
+
+#. Description of the plugin
+#: 
+msgid "Protects site from brute force attacks, bots and hackers. Antispam protection with reCAPTCHA. Comprehensive control of user activity. Restrict login by IP access lists. Limit login attempts. Feel free to contact developer on the site <a href=\"http://wpcerber.com\">wpcerber.com</a>."
+msgstr "Beskytter siden mot brute force-angrep, botter og hackere. Antispam-beskyttelse med erCAPTCHA. Grundig kontroll av brukeraktivitet. Begrensning av innlogginger etter IP-tilgangslister. Begrens innloggingsforsøk. Ta gjerne kontakt med utvikleren på <a href=\"http://wpcerber.com\">wpcerber.com</a>."
+
+#. Author of the plugin
+#: 
+msgid "Gregory"
+msgstr "Gregory"
+
+#: ../wp-cerber.php:579 ../wp-cerber.php:629 ../wp-cerber.php:635 ../wp-cerber.
+#: php:658 ../settings.php:400
+msgid "ERROR:"
+msgstr "FEIL:"
+
+#: ../wp-cerber.php:481
+msgid "Human verification failed. Please click the square box in the reCAPTCHA block below."
+msgstr "Bekreftelse av menneskelighet feilet. Vennligst klikk den firkantige boksen i reCAPTCHA-blokken under."
+
+#: ../wp-cerber.php:591
+msgid "<strong>ERROR</strong>: The password you entered for the username %s is incorrect."
+msgstr "<strong>FEIL</strong>: Passordet du skrev inn for brukernavnet %s er ugyldig."
+
+#: ../wp-cerber.php:636
+msgid "Username is not allowed. Please choose another one."
+msgstr "Brukernavnet er ikke tillatt. Vennligst velg et annet brukernavn."
+
+#: ../wp-cerber.php:1918
+msgid "unspecified"
+msgstr "uspesifisert"
+
+#: ../wp-cerber.php:1922
+msgid "Number of lockouts is increasing"
+msgstr "Antallet utestengelser stiger"
+
+#: ../wp-cerber.php:1928
+msgid "View activity for this IP"
+msgstr "Se aktivitet for denne IP"
+
+#: ../wp-cerber.php:1932 ../wp-cerber.php:1934
+msgid "A new version of WP Cerber is available to install"
+msgstr "En ny versjon av WP Cerber er tilgjengelig for installasjon"
+
+#: ../wp-cerber.php:1933
+msgid "Hi!"
+msgstr "Hei!"
+
+#: ../wp-cerber.php:1935 ../wp-cerber.php:1946
+msgid "Website"
+msgstr "Webside"
+
+#: ../wp-cerber.php:1938 ../wp-cerber.php:1939
+msgid "The WP Cerber security plugin has been deactivated"
+msgstr "Sikkerhetstillegget WP Cerber har blitt deaktivert"
+
+#: ../wp-cerber.php:1941
+msgid "Not logged in"
+msgstr "Ikke innlogget"
+
+#: ../wp-cerber.php:1947
+msgid "By user"
+msgstr "Etter brukernavn"
+
+#: ../wp-cerber.php:1948
+msgid "From IP address"
+msgstr "Fra IP-adresse"
+
+#: ../wp-cerber.php:1951
+msgid "From country"
+msgstr "Fra land"
+
+#: ../wp-cerber.php:1955
+msgid "The WP Cerber security plugin is now active"
+msgstr "Sikkerhetstillegget WP Cerber er nå aktivt"
+
+#: ../wp-cerber.php:2182
+msgid "Your IP address is added to the"
+msgstr "Din IP-adresse ble lagt til"
+
+#: ../wp-cerber.php:2190 ../settings.php:203
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#: ../wp-cerber.php:2191
+msgid "Import settings"
+msgstr "Importer innstillinger"
+
+#: ../settings.php:83
+msgid "Notification limit"
+msgstr "Grense for varslinger"
+
+#: ../settings.php:83
+msgid "notification letters allowed per hour (0 means unlimited)"
+msgstr "varslingsmeldinger tillatt per time (0 betyr ubegrenset)"
+
+#: ../settings.php:111
+msgid "User related settings"
+msgstr "Brukerrelaterte innstillinger"
+
+#: ../settings.php:112
+msgid "Prohibited usernames"
+msgstr "Blokkerte brukernavn"
+
+#: ../settings.php:112
+msgid "Usernames from this list are not allowed to log in or register. Any IP address, have tried to use any of these usernames, will be immediately blocked. Use comma to separate logins."
+msgstr "Brukernavn fra denne listen har ikke tilgang til å logge inn eller registrere seg. Enhver IP som forsøker å bruke noen av disse brukernavnene blir blokkert umiddelbart. Bruk komma for å skille brukernavn."
+
+#: ../settings.php:113
+msgid "User session expire"
+msgstr "Brukerøktens varighet"
+
+#: ../settings.php:113
+msgid "in minutes (leave empty to use default WP value)"
+msgstr "i minutter (la stå tom for å bruke WordPress' standardverdi)"
+
+#: ../settings.php:117
+msgid "reCAPTCHA settings"
+msgstr "reCAPTCHA-innstillinger"
+
+#: ../settings.php:118
+msgid "Site key"
+msgstr "Site key"
+
+#: ../settings.php:119
+msgid "Secret key"
+msgstr "Secret key"
+
+#: ../settings.php:121
+msgid "Enable reCAPTCHA for WordPress registration form"
+msgstr "Slå på reCAPTCHA for WordPress' registreringsskjema"
+
+#: ../settings.php:124
+msgid "Lost password form"
+msgstr "Skjema for mistet passord"
+
+#: ../settings.php:127
+msgid "Login form"
+msgstr "Innloggingsskjema"
+
+#: ../settings.php:127
+msgid "Enable reCAPTCHA for WordPress login form"
+msgstr "Slå på reCAPTCHA for WordPress' innloggingsskjema"
+
+#: ../settings.php:148
+msgid "In Citadel mode nobody is able to login. Active user's sessions will not be affected."
+msgstr "I vakttårns-modus vil ingen kunne logge inn. Aktive brukerinnlogginger vil ikke bli påvirket."
+
+#: ../settings.php:158
+msgid "Before you can start using reCAPTCHA, you have to obtain Site key and Secret key on the Google website"
+msgstr "Før du kan ta i bruk reCAPTCHA må du skaffe deg en Site key og Secret key på Googles webside"
+
+#: ../settings.php:159
+msgid "Know more"
+msgstr "Lær mer"
+
+#: ../dashboard.php:511 ../settings.php:179
+msgid "WP Cerber Security"
+msgstr "WP Cerber-sikkerhet"
+
+#: ../settings.php:200
+msgid "Users"
+msgstr "Brukere"
+
+#: ../common.php:129
+msgid "User created"
+msgstr "Bruker opprettet"
+
+#: ../common.php:130
+msgid "User registered"
+msgstr "Bruker registrert"
+
+#: ../common.php:147
+msgid "reCAPTCHA verification failed"
+msgstr "reCAPTCHA-godkjenning mislyktes"
+
+#: ../common.php:148
+msgid "reCAPTCHA settings are incorrect"
+msgstr "reCAPTCHA-innstillingene er feil"
+
+#: ../common.php:151
+msgid "Attempt to access prohibited URL"
+msgstr "Forsøk på å koble til forbudt URL"
+
+#: ../common.php:153 ../common.php:165
+msgid "Attempt to log in with prohibited username"
+msgstr "Forsøk på å logge inn med forbudt brukernavn"
+
+#: ../common.php:217
+msgid "year"
+msgstr "år"
+
+#: ../common.php:218
+msgid "month"
+msgstr "måned"
+
+#: ../common.php:219
+msgid "day"
+msgstr "dag"
+
+#: ../common.php:220
+msgid "hour"
+msgstr "time"
+
+#: ../common.php:221
+msgid "minute"
+msgstr "minutt"
+
+#: ../common.php:222
+msgid "second"
+msgstr "sekund"
+
+#: ../common.php:225
+msgid "years"
+msgstr "år"
+
+#: ../common.php:226
+msgid "months"
+msgstr "måneder"
+
+#: ../common.php:228
+msgid "hours"
+msgstr "timer"
+
+#: ../common.php:230
+msgid "seconds"
+msgstr "sekunder"
+
+#: ../common.php:236
+msgid "ago"
+msgstr "siden"
+
+#: ../settings.php:90
+msgid "Cerber Lab connection"
+msgstr "Tilkobling til Cerber Lab"
+
+#: ../settings.php:90
+msgid "Send malicious IP addresses to the Cerber Lab"
+msgstr "Send ondsinnede IP-adresser til Cerber Lab"
+
+#: ../settings.php:91
+msgid "Cerber Lab protocol"
+msgstr "Cerber Lab protokoll"
+
+#: ../settings.php:121
+msgid "Registration form"
+msgstr "Registreringsskjema"
+
+#: ../settings.php:122
+msgid "Enable reCAPTCHA for WooCommerce registration form"
+msgstr "Slå på reCAPTCHA for WooCommerces registreringsskjema"
+
+#: ../settings.php:124
+msgid "Enable reCAPTCHA for WordPress lost password form"
+msgstr "Slå på reCAPTCHA for WordPress' skjema for mistet passord"
+
+#: ../settings.php:125
+msgid "Enable reCAPTCHA for WooCommerce lost password form"
+msgstr "Slå på reCAPTCHA for WooCommerce mistet passord-skjema"
+
+#: ../settings.php:128
+msgid "Enable reCAPTCHA for WooCommerce login form"
+msgstr "Slå på reCAPTCHA for WooCommerce innloggings-skjema"
+
+#: ../common.php:149
+msgid "Request to the Google reCAPTCHA service failed"
+msgstr "Forespørsel til Googles reCAPTCHA-tjeneste mislyktes"
+
+#: ../dashboard.php:951 ../dashboard.php:963
+msgid "View all"
+msgstr "Se alle"
+
+#: ../dashboard.php:964
+msgid "Recently locked out IP addresses"
+msgstr "Nylig utestengte IP-adresser"
+
+#: ../cerber-news.php:73
+msgid "OK, nail them all"
+msgstr "OK, ta alle sammen"
+
+#: ../cerber-news.php:74
+msgid "NO, maybe later"
+msgstr "NEI, kanskje senere"
+
+#: ../settings.php:186
+msgid "Dashboard"
+msgstr "Kontrollpanel"
+
+#: ../cerber-news.php:71
+msgid "Want to make WP Cerber even more powerful?"
+msgstr "Vil du gjøre WP Cerber enda sterkere?"
+
+#: ../cerber-news.php:72
+msgid "Allow WP Cerber to send locked out malicious IP addresses to Cerber Lab. This helps the plugin team to develop new algorithms for WP Cerber that will defend WordPress against new threats and botnets that are appearing  everyday. You can disable the sending in the plugin settings at any time."
+msgstr "Tillat at WP Cerber sender utestengde ondsinnede IP-adresser til Cerber Lab. Dette hjelper plugin-teamet å utvikle nye algoritmer som vil beskytte WordPress mot nye trusler og botnett som dukker opp hver dag. Du kan slå av sendingen i plugin-innstillingene når som helst."
+
